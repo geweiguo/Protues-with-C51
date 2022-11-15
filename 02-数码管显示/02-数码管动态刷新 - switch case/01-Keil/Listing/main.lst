@@ -1,0 +1,125 @@
+C51 COMPILER V9.01   MAIN                                                                  11/15/2022 20:45:38 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include "delay.h"
+   3          #include "display.h"
+   4          
+   5          unsigned char wnd;
+   6          unsigned int parm1 = 2088;
+   7          unsigned int parm2 = 1999;
+   8          unsigned int parm3 = 1982;
+   9          unsigned int parm4 = 822; 
+  10           
+  11          void dis_Service()
+  12          { 
+  13   1        unsigned int i;  
+  14   1        switch(wnd)
+  15   1         {
+  16   2          case 0:
+  17   2                  LEDBuf[0] = 1;
+  18   2                  LEDBuf[1] = 22;
+  19   2                  LEDBuf[2] = 23;
+  20   2                  LEDBuf[3] = 23;
+  21   2                  LEDBuf[4] = parm1/1000;
+  22   2                  LEDBuf[5] = parm1/100%10;
+  23   2                  LEDBuf[6] = parm1/10%10;
+  24   2                  LEDBuf[7] = parm1%10;
+  25   2                  for(i = 0;i<2000;i++)
+  26   2                  {
+  27   3                      display();
+  28   3                  }
+  29   2                  wnd++;
+  30   2                  break;
+  31   2      
+  32   2            case 1:
+  33   2                  LEDBuf[0] = 2;
+  34   2                  LEDBuf[1] = 22;
+  35   2                  LEDBuf[2] = 23;
+  36   2                  LEDBuf[3] = 23;
+  37   2                  LEDBuf[4] = parm2/1000;
+  38   2                  LEDBuf[5] = parm2/100%10;
+  39   2                  LEDBuf[6] = parm2/10%10;
+  40   2                  LEDBuf[7] = parm2%10;
+  41   2                  for(i = 0;i<2000;i++)
+  42   2                  {
+  43   3                      display();
+  44   3                  }
+  45   2                  wnd++;
+  46   2                  break;
+  47   2                  
+  48   2            case 2:
+  49   2                  LEDBuf[0] = 3;
+  50   2                  LEDBuf[1] = 22;
+  51   2                  LEDBuf[2] = 23;
+  52   2                  LEDBuf[3] = 23;
+  53   2                  LEDBuf[4] = parm3/1000;
+  54   2                  LEDBuf[5] = parm3/100%10;
+C51 COMPILER V9.01   MAIN                                                                  11/15/2022 20:45:38 PAGE 2   
+
+  55   2                  LEDBuf[6] = parm3/10%10;
+  56   2                  LEDBuf[7] = parm3%10;
+  57   2                  for(i = 0;i<2000;i++)
+  58   2                  {
+  59   3                      display();
+  60   3                  }
+  61   2                  wnd++;
+  62   2                  break;
+  63   2                                      
+  64   2            case 3:
+  65   2                  LEDBuf[0] = 4;
+  66   2                  LEDBuf[1] = 22;
+  67   2                  LEDBuf[2] = 23;
+  68   2                  LEDBuf[3] = 23;
+  69   2                  LEDBuf[4] = parm4/1000;
+  70   2                  LEDBuf[5] = parm4/100%10;
+  71   2                  LEDBuf[6] = parm4/10%10;
+  72   2                  LEDBuf[7] = parm4%10;
+  73   2                  for(i = 0;i<2000;i++)
+  74   2                  {
+  75   3                      display();
+  76   3                  }
+  77   2                  wnd=0;
+  78   2                  break;
+  79   2              default: break;
+  80   2                  
+  81   2            }
+  82   1      }
+  83          
+  84          void main()
+  85          {
+  86   1          unsigned int i;
+  87   1          for(i=0;i<2000;i++)
+  88   1          {
+  89   2              display();
+  90   2          }
+  91   1      
+  92   1          while(1)
+  93   1          {
+  94   2              dis_Service();
+  95   2          
+  96   2          }
+  97   1      }
+  98          
+  99          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    482    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      9       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+"..\Output\delay.obj",
+"..\Output\main.obj",
+"..\Output\display.obj" 
+TO "..\Output\数码管动态显示" 
+PRINT("..\Listing\数码管动态显示.m51") DISABLEWARNING (16) 
