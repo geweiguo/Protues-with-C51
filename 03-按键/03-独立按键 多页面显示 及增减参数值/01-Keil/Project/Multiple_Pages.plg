@@ -1,0 +1,547 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\00-Github Protues\Protues-with-C51\03-按键\03-独立按键 多页面显示 及增减参数值\01-Keil\Project\Multiple_Pages.uvproj
+Project File Date:  11/18/2022
+
+<h2>Output:</h2>
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+..\Source\Key.c(2): warning C318: can't open file 'delay.h'
+..\SOURCE\KEY.C(14): warning C206: 'DelayXms': missing function-prototype
+..\SOURCE\KEY.C(14): error C267: 'DelayXms': requires ANSI-style prototype
+目标未创建
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+    ADDRESS: 00ABH
+Program Size: data=10.0 xdata=0 code=228
+"Multiple_Pages" - 0 Error(s), 3 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=15.0 xdata=0 code=361
+"Multiple_Pages" - 0 Error(s), 7 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=369
+"Multiple_Pages" - 0 Error(s), 7 Warning(s).
+compiling display.c...
+..\Source\display.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\SOURCE\MAIN.C(17): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(18): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(19): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(20): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(21): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(22): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(23): error C202: 'LEDBuf': undefined identifier
+..\SOURCE\MAIN.C(24): error C202: 'LEDBuf': undefined identifier
+..\Source\main.c - 8 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=396
+"Multiple_Pages" - 0 Error(s), 7 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(12): warning C206: 'InitDisplay': missing function-prototype
+..\SOURCE\MAIN.C(20): error C231: 'InitDisplay': redefinition
+..\SOURCE\MAIN.C(32): error C231: 'InitDisplay': redefinition
+compiling Key.c...
+compiling display.c...
+目标未创建
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  .\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=403
+"Multiple_Pages" - 0 Error(s), 6 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=403
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=403
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=403
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 010DH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00E8H
+Program Size: data=19.0 xdata=0 code=403
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=481
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling display.c...
+..\Source\display.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=481
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=481
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling display.c...
+..\Source\display.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=477
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=474
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=477
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+Build target '目标 1'
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=477
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling display.c...
+..\Source\display.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=474
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=474
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling Key.c...
+compiling display.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\Key.obj (KEY)
+    ADDRESS: 015BH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 008EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAYXMS
+    MODULE:  ..\Output\display.obj (DISPLAY)
+    ADDRESS: 00AAH
+Program Size: data=19.0 xdata=0 code=472
+creating hex file from "..\Output\Multiple_Pages"...
+"..\Output\Multiple_Pages" - 0 Error(s), 5 Warning(s).

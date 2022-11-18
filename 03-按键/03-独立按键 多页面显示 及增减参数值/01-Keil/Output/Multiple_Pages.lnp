@@ -1,0 +1,6 @@
+"..\Output\main.obj",
+"..\Output\Key.obj",
+"..\Output\display.obj",
+"..\Output\delay.obj" 
+TO "..\Output\Multiple_Pages" 
+PRINT("..\Listing\Multiple_Pages.m51") DISABLEWARNING (16) 

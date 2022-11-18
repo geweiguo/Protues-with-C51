@@ -1,0 +1,79 @@
+C51 COMPILER V9.01   KEY                                                                   11/17/2022 14:51:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN ..\Output\Key.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE Key.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Listing\Key.ls
+                    -t) OBJECT(..\Output\Key.obj)
+
+line level    source
+
+   1          #include "Key.h"
+   2          #include "delay.h"
+   3          
+   4          unsigned char KeyNum = 0;
+   5                                
+   6          void Key_Scan(void)
+   7          {
+   8   1      
+   9   1          KeyNum = 0;
+  10   1          KEY1 = 1; KEY2 = 1; KEY3 = 1; KEY4 = 1;
+  11   1      
+  12   1          if(!KEY1 || !KEY2 || !KEY3 || !KEY4)
+  13   1          {
+  14   2             DelayXms(10);
+  15   2             if(!KEY1 || !KEY2 || !KEY3 || !KEY4)
+  16   2             {
+  17   3                 if(!KEY1)
+  18   3                  KeyNum = 1;
+  19   3                 if(!KEY2)
+  20   3                  KeyNum = 2;    
+  21   3                 if(!KEY3)
+  22   3                  KeyNum = 3;
+  23   3                 if(!KEY4)
+  24   3                  KeyNum = 4;
+  25   3             }while(!KEY1 || !KEY2 || !KEY3 || !KEY4); 
+  26   2      
+  27   2          
+  28   2          }
+  29   1      
+  30   1      
+  31   1      
+  32   1      
+  33   1      
+  34   1      //   if(0 == KEY1)
+  35   1      //   {
+  36   1      //      DelayXms(10);
+  37   1      //      if(0 == KEY1)
+  38   1      //      {
+  39   1      //        KeyNum = 1; 
+  40   1      //      }while(0 == KEY1);
+  41   1      //       
+  42   1      //   }
+  43   1      //
+  44   1      //   if(0 == KEY2)
+  45   1      //   {
+  46   1      //      DelayXms(10);
+  47   1      //      if(0 == KEY2)
+  48   1      //      {
+  49   1      //        KeyNum = 2; 
+  50   1      //      }while(0 == KEY2);  
+  51   1      //   }
+  52   1         
+  53   1      }
+
+C51 COMPILER V9.01   KEY                                                                   11/17/2022 14:51:29 PAGE 2   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     79    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

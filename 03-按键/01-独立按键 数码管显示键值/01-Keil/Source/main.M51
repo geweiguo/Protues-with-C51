@@ -1,0 +1,125 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/17/2022  10:49:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\PROGRAM FILES (X86)\KEIL\C51\BIN\BL51.EXE main.obj, Key.obj, delay.obj TO main
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  Key.obj (KEY)
+  delay.obj (DELAY)
+  E:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  main (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0026H     UNIT         ?PR?_DELAY?DELAY
+            CODE    0029H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0035H     000BH     UNIT         ?PR?MAIN?MAIN
+            CODE    0040H     0006H     UNIT         ?PR?KEY_SCAN?KEY
+
+
+
+OVERLAY MAP OF MODULE:   main (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?KEY_SCAN?KEY
+
+
+
+SYMBOL TABLE OF MODULE:  main (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0035H         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/17/2022  10:49:32  PAGE 2
+
+
+  C:0035H         LINE#         4
+  C:0035H         LINE#         5
+  C:0035H         LINE#         6
+  C:0035H         LINE#         7
+  C:0035H         LINE#         8
+  C:003BH         LINE#         9
+  C:003BH         LINE#         10
+  C:003EH         LINE#         11
+  C:003EH         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        KEY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:0040H         PUBLIC        Key_Scan
+  B:00B0H.0       PUBLIC        KEY1
+  -------         PROC          KEY_SCAN
+  -------         DO            
+  D:0007H         SYMBOL        KeyNum
+  -------         ENDDO         
+  C:0040H         LINE#         3
+  C:0040H         LINE#         4
+  C:0040H         LINE#         6
+  C:0043H         LINE#         7
+  C:0043H         LINE#         8
+  C:0045H         LINE#         9
+  C:0045H         LINE#         11
+  C:0045H         LINE#         12
+  -------         ENDPROC       KEY_SCAN
+  -------         ENDMOD        KEY
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0003H         PUBLIC        _delay
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         4
+  C:0003H         LINE#         5
+  C:0003H         LINE#         8
+  C:0013H         LINE#         9
+  C:0013H         LINE#         10
+  C:0016H         LINE#         11
+  C:0016H         LINE#         12
+  C:0021H         LINE#         13
+  C:0028H         LINE#         15
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?DELAY
+
+Program Size: data=9.0 xdata=0 code=70
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/17/2022  10:49:32  PAGE 3
+
+
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

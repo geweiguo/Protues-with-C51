@@ -1,0 +1,117 @@
+C51 COMPILER V9.01   DISPLAY                                                               11/17/2022 14:51:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE DISPLAY
+OBJECT MODULE PLACED IN ..\Output\display.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE display.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Listing\di
+                    -splay.lst) OBJECT(..\Output\display.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include<stdio.h>
+   3          #include "delay.h"
+   4          #include "display.h"
+   5          
+   6          
+   7          unsigned char code leddataCC[]={ 
+   8           
+   9                          0x3F,  //"0"
+  10                          0x06,  //"1"
+  11                          0x5B,  //"2"
+  12                          0x4F,  //"3"
+  13                          0x66,  //"4"
+  14                          0x6D,  //"5"
+  15                          0x7D,  //"6"
+  16                          0x07,  //"7"
+  17                          0x7F,  //"8"
+  18                          0x6F,  //"9"
+  19                          0x77,  //"A"
+  20                          0x7C,  //"B"
+  21                          0x39,  //"C"
+  22                          0x5E,  //"D"
+  23                          0x79,  //"E"
+  24                          0x71,  //"F"
+  25                          0x76,  //"H"
+  26                          0x38,  //"L"
+  27                          0x37,  //"n"
+  28                          0x3E,  //"u"
+  29                          0x73,  //"P"
+  30                          0x5C,  //"o"
+  31                          0x40,  //"-"
+  32                          0x00,  //熄灭
+  33                          0x00  //自定义
+  34           
+  35                                   };  //共阴数码管
+  36          
+  37                                 
+  38          unsigned char LEDBuf[] = {8,8,8,8};   //数据显示缓冲区
+  39          unsigned char code PLACE_CODE[] = {0xfe,0xfd,0xfb,0xf7}; //共阴，位选信号
+  40          
+  41          
+  42          void Display()
+  43          {   
+  44   1              unsigned char i;
+  45   1              //1、送断码
+  46   1       
+  47   1          
+  48   1              //2、送位选
+  49   1      
+  50   1          
+  51   1              //3、延时1 ms  总循环<10ms
+  52   1       
+  53   1              
+  54   1              //4、消隐
+C51 COMPILER V9.01   DISPLAY                                                               11/17/2022 14:51:29 PAGE 2   
+
+  55   1               switch(i)
+  56   1               {
+  57   2                  case 0:
+  58   2                          GPIO_DIG = leddataCC[LEDBuf[0]];
+  59   2                          GPIO_PLACE = PLACE_CODE[0];
+  60   2                          DelayXms(1);
+  61   2                          GPIO_PLACE = 0xFF;
+  62   2                          i++;break;
+  63   2                  case 1: 
+  64   2                          GPIO_DIG = leddataCC[LEDBuf[1]];
+  65   2                          GPIO_PLACE = PLACE_CODE[1];
+  66   2                          DelayXms(1);
+  67   2                          GPIO_PLACE = 0xFF;
+  68   2                          i++;break;
+  69   2                  case 2: 
+  70   2                          GPIO_DIG = leddataCC[LEDBuf[2]];
+  71   2                          GPIO_PLACE = PLACE_CODE[2];
+  72   2                          DelayXms(1);
+  73   2                          GPIO_PLACE = 0xFF;
+  74   2                          i++;break;
+  75   2                  case 3: 
+  76   2                          GPIO_DIG = leddataCC[LEDBuf[3]];
+  77   2                          GPIO_PLACE = PLACE_CODE[3];
+  78   2                          DelayXms(1);
+  79   2                          GPIO_PLACE = 0xFF;
+  80   2                          i=0;break;
+  81   2      
+  82   2      
+  83   2                  default: if(i>4);
+  84   2                  break;
+  85   2               
+  86   2               
+  87   2               }
+  88   1      
+  89   1             
+  90   1      
+  91   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     98    ----
+   CONSTANT SIZE    =     29    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+"..\Output\main.obj",
+"..\Output\Key.obj",
+"..\Output\delay.obj" 
+TO "..\Output\main" 
+PRINT("..\Listing\main.m51") DISABLEWARNING (16) 
