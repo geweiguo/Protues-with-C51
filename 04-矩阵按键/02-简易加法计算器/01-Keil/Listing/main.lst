@@ -1,0 +1,130 @@
+C51 COMPILER V9.01   MAIN                                                                  11/20/2022 23:47:34 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include "matrixkey.h"
+   3          #include "display.h"
+   4          
+   5          void Distemp_Service();
+   6          void DisNumber1_Service();
+   7          void DisResult_Service();
+   8          
+   9          unsigned char temp = 0;
+  10          unsigned char Number1 = 0;
+  11          unsigned char Result = 0;
+  12          
+  13          void main()
+  14          {   
+  15   1          unsigned char Addflag = 0;
+  16   1      
+  17   1          while(1)
+  18   1          {
+  19   2              MatrixKey_Scan();
+  20   2              
+  21   2              switch(KeyNum)
+  22   2              {
+  23   3                case 0:  if(!Addflag) {temp = 0;Addflag  = 1;}
+  24   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  25   3                case 1:  if(!Addflag) {temp = 1;Addflag  = 1;}
+  26   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  27   3                case 2:  if(!Addflag) {temp = 2;Addflag  = 1;}
+  28   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  29   3                case 3:  if(!Addflag) {temp = 3;Addflag  = 1;}
+  30   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  31   3                case 4:  if(!Addflag) {temp = 4;Addflag  = 1;}
+  32   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  33   3                case 5:  if(!Addflag) {temp = 5;Addflag  = 1;}
+  34   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  35   3                case 6:  if(!Addflag) {temp = 6;Addflag  = 1;}
+  36   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  37   3                case 7:  if(!Addflag) {temp = 7;Addflag  = 1;}
+  38   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  39   3                case 8:  if(!Addflag) {temp = 8;Addflag  = 1;}
+  40   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  41   3                case 9:  if(!Addflag) {temp = 9;Addflag  = 1;}
+  42   3                         else {temp = temp*10 + KeyNum; KeyNum = 22;}break;
+  43   3          
+  44   3                case 10: Number1 = temp; temp = 0;Addflag  = 0;KeyNum = 25;break;
+  45   3                case 15: Result = Number1 + temp ;Addflag  = 0;KeyNum = 30;break;
+  46   3          
+  47   3                default: break;       
+  48   3              }
+  49   2              if(22 == KeyNum) 
+  50   2                  {
+  51   3                       Distemp_Service(); 
+  52   3                  } 
+  53   2              if(25 == KeyNum) 
+  54   2                  {
+C51 COMPILER V9.01   MAIN                                                                  11/20/2022 23:47:34 PAGE 2   
+
+  55   3                   DisNumber1_Service(); 
+  56   3              } 
+  57   2              if(30 == KeyNum) 
+  58   2              {
+  59   3                   DisResult_Service(); 
+  60   3              }     
+  61   2          }
+  62   1      }
+  63          
+  64          void DisResult_Service()
+  65          {
+  66   1              LEDBuf[0] = 23;
+  67   1              LEDBuf[1] = 23;
+  68   1              LEDBuf[2] = 23;
+  69   1              LEDBuf[3] = 23;
+  70   1              LEDBuf[4] = Result/1000;
+  71   1              LEDBuf[5] = Result/100%10;
+  72   1              LEDBuf[6] = Result/10%10;
+  73   1              LEDBuf[7] = Result%10;
+  74   1      
+  75   1              Display(); 
+  76   1      }
+  77          
+  78          void DisNumber1_Service()
+  79          {
+  80   1              LEDBuf[0] = 23;
+  81   1              LEDBuf[1] = 23;
+  82   1              LEDBuf[2] = 23;
+  83   1              LEDBuf[3] = 23;
+  84   1              LEDBuf[4] = Number1/1000;
+  85   1              LEDBuf[5] = Number1/100%10;
+  86   1              LEDBuf[6] = Number1/10%10;
+  87   1              LEDBuf[7] = Number1%10;
+  88   1      
+  89   1              Display(); 
+  90   1      }
+  91          
+  92          void Distemp_Service()
+  93          {
+  94   1              LEDBuf[0] = 23;
+  95   1              LEDBuf[1] = 23;
+  96   1              LEDBuf[2] = 23;
+  97   1              LEDBuf[3] = 23;
+  98   1              LEDBuf[4] = temp/1000;
+  99   1              LEDBuf[5] = temp/100%10;
+ 100   1              LEDBuf[6] = temp/10%10;
+ 101   1              LEDBuf[7] = temp%10;
+ 102   1      
+ 103   1              Display(); 
+ 104   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    439    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,335 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/19/2022  13:42:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\PROGRAM FILES (X86)\KEIL\C51\BIN\BL51.EXE ..\Output\main.obj, ..\Output\matrixkey.obj, ..\Output\delay.obj, ..\Output
+>> \display.obj TO ..\Output\MatrixButton PRINT (..\Listing\MatrixButton.m51) DISABLEWARNING (16)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ..\Output\main.obj (MAIN)
+  ..\Output\matrixkey.obj (MATRIXKEY)
+  ..\Output\delay.obj (DELAY)
+  ..\Output\display.obj (DISPLAY)
+  E:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  ..\Output\MatrixButton (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?DISPLAY
+            DATA    0010H     0003H     UNIT         ?DT?MAIN
+            DATA    0013H     0002H     UNIT         ?DT?MATRIXKEY
+            DATA    0015H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0016H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0118H     UNIT         ?PR?MATRIXKEY_SERVICE?MAIN
+            CODE    011BH     00B0H     UNIT         ?PR?DISPLAY?DISPLAY
+            CODE    01CBH     009BH     UNIT         ?PR?MATRIXKEY_SCAN?MATRIXKEY
+            CODE    0266H     008CH     UNIT         ?C_C51STARTUP
+            CODE    02F2H     0021H     UNIT         ?CO?DISPLAY
+            CODE    0313H     0020H     UNIT         ?PR?_DELAYXMS?DELAY
+            CODE    0333H     001BH     UNIT         ?PR?DIS_SERVICE?MAIN
+            CODE    034EH     001AH     UNIT         ?C_INITSEG
+            CODE    0368H     0008H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   ..\Output\MatrixButton (MAIN)
+
+
+SEGMENT                                DATA_GROUP 
+  +--> CALLED SEGMENT                START    LENGTH
+----------------------------------------------------
+?C_C51STARTUP                        -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                        -----    -----
+  +--> ?PR?MATRIXKEY_SERVICE?MAIN
+  +--> ?PR?DIS_SERVICE?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/19/2022  13:42:44  PAGE 2
+
+
+
+?PR?MATRIXKEY_SERVICE?MAIN           -----    -----
+  +--> ?PR?MATRIXKEY_SCAN?MATRIXKEY
+
+?PR?MATRIXKEY_SCAN?MATRIXKEY         -----    -----
+  +--> ?PR?_DELAYXMS?DELAY
+
+?PR?DIS_SERVICE?MAIN                 -----    -----
+  +--> ?PR?DISPLAY?DISPLAY
+
+?PR?DISPLAY?DISPLAY                  0015H    0001H
+  +--> ?CO?DISPLAY
+  +--> ?PR?_DELAYXMS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  ..\Output\MatrixButton (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0368H         PUBLIC        main
+  D:0010H         PUBLIC        X
+  C:0333H         PUBLIC        Dis_Service
+  D:0011H         PUBLIC        Y
+  C:0003H         PUBLIC        MatrixKey_Service
+  D:0012H         PUBLIC        KeyNum
+  -------         PROC          MAIN
+  C:0368H         LINE#         19
+  C:0368H         LINE#         20
+  C:0368H         LINE#         21
+  C:0368H         LINE#         22
+  C:0368H         LINE#         23
+  C:036BH         LINE#         24
+  C:036EH         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         PROC          DIS_SERVICE
+  C:0333H         LINE#         28
+  C:0333H         LINE#         29
+  C:0333H         LINE#         30
+  C:0336H         LINE#         31
+  C:0339H         LINE#         32
+  C:033CH         LINE#         33
+  C:033FH         LINE#         34
+  C:0342H         LINE#         35
+  C:0345H         LINE#         36
+  C:0348H         LINE#         37
+  C:034BH         LINE#         39
+  -------         ENDPROC       DIS_SERVICE
+  -------         PROC          MATRIXKEY_SERVICE
+  C:0003H         LINE#         42
+  C:0003H         LINE#         43
+  C:0003H         LINE#         44
+  C:0006H         LINE#         45
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/19/2022  13:42:44  PAGE 3
+
+
+  C:0016H         LINE#         46
+  C:0016H         LINE#         47
+  C:0016H         LINE#         48
+  C:001BH         LINE#         49
+  C:0020H         LINE#         50
+  C:0025H         LINE#         51
+  C:0028H         LINE#         52
+  C:0028H         LINE#         53
+  C:0028H         LINE#         54
+  C:0038H         LINE#         55
+  C:0038H         LINE#         56
+  C:0038H         LINE#         57
+  C:003DH         LINE#         58
+  C:0042H         LINE#         59
+  C:0047H         LINE#         60
+  C:004AH         LINE#         61
+  C:004AH         LINE#         62
+  C:004AH         LINE#         63
+  C:0054H         LINE#         64
+  C:0057H         LINE#         65
+  C:0061H         LINE#         66
+  C:0064H         LINE#         67
+  C:006EH         LINE#         68
+  C:0071H         LINE#         69
+  C:007BH         LINE#         70
+  C:007EH         LINE#         71
+  C:0088H         LINE#         72
+  C:008BH         LINE#         73
+  C:0095H         LINE#         74
+  C:0098H         LINE#         75
+  C:00A2H         LINE#         76
+  C:00A5H         LINE#         77
+  C:00AFH         LINE#         78
+  C:00B2H         LINE#         79
+  C:00BCH         LINE#         80
+  C:00BFH         LINE#         81
+  C:00C9H         LINE#         82
+  C:00CCH         LINE#         83
+  C:00D6H         LINE#         84
+  C:00D9H         LINE#         85
+  C:00E3H         LINE#         86
+  C:00E6H         LINE#         87
+  C:00F0H         LINE#         88
+  C:00F3H         LINE#         89
+  C:00FDH         LINE#         90
+  C:0100H         LINE#         91
+  C:010AH         LINE#         92
+  C:010DH         LINE#         93
+  C:0117H         LINE#         94
+  C:011AH         LINE#         95
+  -------         ENDPROC       MATRIXKEY_SERVICE
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        MATRIXKEY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:0013H         PUBLIC        KEYIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/19/2022  13:42:44  PAGE 4
+
+
+  C:01CBH         PUBLIC        MatrixKey_Scan
+  B:0090H.4       PUBLIC        KEYOUT1
+  B:0090H.5       PUBLIC        KEYOUT2
+  B:0090H.6       PUBLIC        KEYOUT3
+  B:0090H.7       PUBLIC        KEYOUT4
+  B:0090H.0       PUBLIC        KEYIN1
+  B:0090H.1       PUBLIC        KEYIN2
+  B:0090H.2       PUBLIC        KEYIN3
+  B:0090H.3       PUBLIC        KEYIN4
+  D:0014H         PUBLIC        KEYOUT
+  -------         PROC          MATRIXKEY_SCAN
+  C:01CBH         LINE#         8
+  C:01CBH         LINE#         9
+  C:01CBH         LINE#         13
+  C:01D3H         LINE#         14
+  C:01DBH         LINE#         16
+  C:01E7H         LINE#         17
+  C:01E7H         LINE#         18
+  C:01EEH         LINE#         19
+  C:01FAH         LINE#         20
+  C:01FAH         LINE#         21
+  C:01FDH         LINE#         22
+  C:0200H         LINE#         23
+  C:0203H         LINE#         24
+  C:0206H         LINE#         25
+  C:0209H         LINE#         26
+  C:020CH         LINE#         27
+  C:020FH         LINE#         28
+  C:0212H         LINE#         29
+  C:0212H         LINE#         30
+  C:0212H         LINE#         32
+  C:021AH         LINE#         33
+  C:0222H         LINE#         35
+  C:022EH         LINE#         36
+  C:022EH         LINE#         37
+  C:0235H         LINE#         38
+  C:0241H         LINE#         39
+  C:0241H         LINE#         40
+  C:0244H         LINE#         41
+  C:0247H         LINE#         42
+  C:024AH         LINE#         43
+  C:024DH         LINE#         44
+  C:0250H         LINE#         45
+  C:0253H         LINE#         46
+  C:0256H         LINE#         47
+  C:0259H         LINE#         48
+  C:0265H         LINE#         49
+  C:0265H         LINE#         50
+  -------         ENDPROC       MATRIXKEY_SCAN
+  -------         ENDMOD        MATRIXKEY
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0313H         PUBLIC        _DelayXms
+  -------         PROC          _DELAYXMS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/19/2022  13:42:44  PAGE 5
+
+
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0313H         LINE#         4
+  C:0313H         LINE#         5
+  C:0313H         LINE#         8
+  C:031DH         LINE#         9
+  C:031DH         LINE#         10
+  C:0320H         LINE#         11
+  C:0320H         LINE#         12
+  C:032BH         LINE#         13
+  C:0332H         LINE#         15
+  -------         ENDPROC       _DELAYXMS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        DISPLAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  C:011BH         PUBLIC        Display
+  C:02F2H         PUBLIC        leddataCC
+  C:030BH         PUBLIC        PLACE_CODE
+  D:0008H         PUBLIC        LEDBuf
+  -------         PROC          DISPLAY
+  -------         DO            
+  D:0015H         SYMBOL        i
+  -------         ENDDO         
+  C:011BH         LINE#         41
+  C:011BH         LINE#         42
+  C:011BH         LINE#         54
+  C:0144H         LINE#         55
+  C:0144H         LINE#         56
+  C:0144H         LINE#         57
+  C:014CH         LINE#         58
+  C:014FH         LINE#         59
+  C:014FH         LINE#         60
+  C:014FH         LINE#         61
+  C:0151H         LINE#         62
+  C:0151H         LINE#         63
+  C:0159H         LINE#         64
+  C:015CH         LINE#         65
+  C:015CH         LINE#         66
+  C:015CH         LINE#         67
+  C:015EH         LINE#         68
+  C:015EH         LINE#         69
+  C:0166H         LINE#         70
+  C:0169H         LINE#         71
+  C:0169H         LINE#         72
+  C:0169H         LINE#         73
+  C:016BH         LINE#         74
+  C:016BH         LINE#         75
+  C:0173H         LINE#         76
+  C:0176H         LINE#         77
+  C:0176H         LINE#         78
+  C:0176H         LINE#         79
+  C:0178H         LINE#         80
+  C:0178H         LINE#         81
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/19/2022  13:42:44  PAGE 6
+
+
+  C:0180H         LINE#         82
+  C:0183H         LINE#         83
+  C:0183H         LINE#         84
+  C:0183H         LINE#         85
+  C:0185H         LINE#         86
+  C:0185H         LINE#         87
+  C:018DH         LINE#         88
+  C:0190H         LINE#         89
+  C:0190H         LINE#         90
+  C:0190H         LINE#         91
+  C:0192H         LINE#         92
+  C:0192H         LINE#         93
+  C:019AH         LINE#         94
+  C:01A1H         LINE#         95
+  C:01A8H         LINE#         96
+  C:01ABH         LINE#         97
+  C:01AEH         LINE#         98
+  C:01AEH         LINE#         99
+  C:01B6H         LINE#         100
+  C:01BDH         LINE#         101
+  C:01C4H         LINE#         102
+  C:01C7H         LINE#         103
+  C:01CAH         LINE#         105
+  C:01CAH         LINE#         106
+  C:01CAH         LINE#         109
+  C:01CAH         LINE#         111
+  -------         ENDPROC       DISPLAY
+  -------         ENDMOD        DISPLAY
+
+Program Size: data=23.0 xdata=0 code=880
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

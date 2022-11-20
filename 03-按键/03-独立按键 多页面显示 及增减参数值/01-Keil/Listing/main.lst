@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MAIN                                                                  11/18/2022 19:42:13 PAGE 1   
+C51 COMPILER V9.01   MAIN                                                                  11/19/2022 11:32:38 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
@@ -33,64 +33,50 @@ line level    source
   23   2              }
   24   1      }
   25          
-  26          void InitDisplay()
+  26          void dis_Service() 
   27          {
-  28   1                  LEDBuf[0] = 22;
-  29   1                  LEDBuf[1] = 16;
-  30   1                  LEDBuf[2] = 14;
-  31   1                  LEDBuf[3] = 17;
-  32   1                  LEDBuf[4] = 17;
-  33   1                  LEDBuf[5] = 0;
-  34   1                  LEDBuf[6] = 22;
-  35   1                  LEDBuf[7] = 22;
-  36   1             
-  37   1                  Display();     
+  28   1          LEDBuf[0] = 20;
+  29   1          LEDBuf[1] = i+1;
+  30   1          LEDBuf[2] = 22;
+  31   1          LEDBuf[3] = 22;
+  32   1          LEDBuf[4] =  Param[i]/1000;
+  33   1          LEDBuf[5] =  Param[i]/100%10;
+  34   1          LEDBuf[6] =  Param[i]/10%10;
+  35   1          LEDBuf[7] =  Param[i]%10; 
+  36   1                       
+  37   1          Display(); 
   38   1      }
   39          
-  40          void dis_Service() 
+  40          void Wnd_Dispaly()
   41          {
-  42   1          LEDBuf[0] = 20;
-  43   1          LEDBuf[1] = i+1;
-  44   1          LEDBuf[2] = 22;
-  45   1          LEDBuf[3] = 22;
-  46   1          LEDBuf[4] =  Param[i]/1000;
-  47   1          LEDBuf[5] =  Param[i]/100%10;
-  48   1          LEDBuf[6] =  Param[i]/10%10;
-  49   1          LEDBuf[7] =  Param[i]%10; 
-  50   1                       
-  51   1          Display(); 
-  52   1      }
-  53          
-  54          void Wnd_Dispaly()
-C51 COMPILER V9.01   MAIN                                                                  11/18/2022 19:42:13 PAGE 2   
+  42   1          Key_Scan();
+  43   1      
+  44   1          if(1 == KeyNum)
+  45   1          {   
+  46   2                i++;
+  47   2                if(i == 4 )
+  48   2                {
+  49   3                    i = 0;
+  50   3                }                                                       
+  51   2          } 
+  52   1      
+  53   1          else if(2 == KeyNum || 3 == KeyNum || 4 == KeyNum) 
+  54   1          {
+C51 COMPILER V9.01   MAIN                                                                  11/19/2022 11:32:38 PAGE 2   
 
-  55          {
-  56   1          Key_Scan();
-  57   1      
-  58   1          if(1 == KeyNum)
-  59   1          {   
-  60   2                i++;
-  61   2                if(i == 4 )
-  62   2                {
-  63   3                    i = 0;
-  64   3                }                                                       
-  65   2          } 
-  66   1      
-  67   1          else if(2 == KeyNum || 3 == KeyNum || 4 == KeyNum) 
-  68   1          {
-  69   2            switch(KeyNum)
-  70   2            {
-  71   3              case 2:Param[i]++;if(Param[i]>9999) Param[i] = 0;break; 
-  72   3              case 3:Param[i]--;if(Param[i]>9999) Param[i] = 9999;break; 
-  73   3              case 4:Param[i] = 0;break;
-  74   3              default: break;
-  75   3             }     
-  76   2          }
-  77   1      }
+  55   2            switch(KeyNum)
+  56   2            {
+  57   3              case 2:Param[i]++;if(Param[i]>9999) Param[i] = 0;break; 
+  58   3              case 3:Param[i]--;if(Param[i]>9999) Param[i] = 9999;break; 
+  59   3              case 4:Param[i] = 0;break;
+  60   3              default: break;
+  61   3             }     
+  62   2          }
+  63   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    286    ----
+   CODE SIZE        =    259    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

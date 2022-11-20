@@ -216,10 +216,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>36</ColumnNumber>
+      <ColumnNumber>33</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>15</CurrentLine>
+      <TopLine>7</TopLine>
+      <CurrentLine>17</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -260,8 +260,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2</TopLine>
-      <CurrentLine>9</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>4</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Key.c</PathWithFileName>
       <FilenameWithoutPath>Key.c</FilenameWithoutPath>
@@ -271,7 +271,7 @@
   <AlienFiles>
     <PathWithFilename>F:\00-Github Protues\Protues-with-C51\03-按键\01-独立按键 数码管显示键值\01-Keil\Source\KEY.H</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>12</CurrentLine>
+    <CurrentLine>6</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1691,9 +1691,9 @@
       <Documents>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>36</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>15</CurrentLine>
+          <ColumnNumber>33</ColumnNumber>
+          <TopLine>7</TopLine>
+          <CurrentLine>17</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\delay.c</Name>
@@ -1721,15 +1721,15 @@
         </Doc>
         <Doc>
           <Name>KEY.H</Name>
-          <ColumnNumber>28</ColumnNumber>
+          <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>12</CurrentLine>
+          <CurrentLine>6</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\Key.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>2</TopLine>
-          <CurrentLine>9</CurrentLine>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

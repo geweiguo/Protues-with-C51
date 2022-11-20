@@ -1,0 +1,6 @@
+"..\Output\main.obj",
+"..\Output\matrixkey.obj",
+"..\Output\delay.obj",
+"..\Output\display.obj" 
+TO "..\Output\MatrixButton" 
+PRINT("..\Listing\MatrixButton.m51") DISABLEWARNING (16) 

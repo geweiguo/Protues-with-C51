@@ -23,20 +23,6 @@ void main()
         }
 }
 
-void InitDisplay()
-{
-            LEDBuf[0] = 22;
-            LEDBuf[1] = 16;
-            LEDBuf[2] = 14;
-            LEDBuf[3] = 17;
-            LEDBuf[4] = 17;
-            LEDBuf[5] = 0;
-            LEDBuf[6] = 22;
-            LEDBuf[7] = 22;
-       
-            Display();     
-}
-
 void dis_Service() 
 {
     LEDBuf[0] = 20;
