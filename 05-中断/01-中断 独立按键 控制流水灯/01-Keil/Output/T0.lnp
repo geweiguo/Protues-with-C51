@@ -1,0 +1,3 @@
+"..\Output\main.obj" 
+TO "..\Output\T0" 
+PRINT("..\Listing\T0.m51")
