@@ -1,11 +1,10 @@
 #include "matrixkey.h"
-
-unsigned char KeyNum = 22;
 unsigned char Temp1 = 0; //高4位
 unsigned char Temp2 = 0;
 
-void MatrixKey_Scan(void)
-{   
+unsigned char MatrixKey_Scan(void)
+{  
+   static unsigned char KeyNum = 22;
    KEYPort = 0xf0;//4行做输出  4列做输入  输出“0”  输入 “1”
    Temp1 = KEYPort;
    if(KEYPort != 0xf0)
@@ -39,4 +38,5 @@ void MatrixKey_Scan(void)
       case 0x77: KeyNum = 15;break; 
       default:break;  
    }
+    return KeyNum;
 }

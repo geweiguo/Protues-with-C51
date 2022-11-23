@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MATRIXKEY                                                             11/19/2022 20:42:51 PAGE 1   
+C51 COMPILER V9.01   MATRIXKEY                                                             11/22/2022 12:49:26 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MATRIXKEY
@@ -24,9 +24,9 @@ line level    source
   14   2              DelayXms(10);
   15   2              if(KEYPort != 0xf0)
   16   2              {
-  17   3                  Temp1 = KEYPort & 0xf0;
+  17   3                  Temp1 = KEYPort & 0xf0;     //Ê¾ÀýTemp1£º 1110 0000 ¡¢1101 0000 ¡¢1011 0000 ¡¢0111 0000
   18   3                  KEYPort = 0x0f;
-  19   3                  Temp2 = KEYPort & 0x0f;
+  19   3                  Temp2 = KEYPort & 0x0f;    //Ê¾ÀýTemp2£º 0000 1110 ¡¢0000 1101 ¡¢0000 1011 ¡¢0000 0111 
   20   3              }   
   21   2         }
   22   1      
@@ -63,7 +63,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
-C51 COMPILER V9.01   MATRIXKEY                                                             11/19/2022 20:42:51 PAGE 2   
+C51 COMPILER V9.01   MATRIXKEY                                                             11/22/2022 12:49:26 PAGE 2   
 
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

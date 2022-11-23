@@ -1,4 +1,4 @@
-#include<reg51.h>
+#include<reg52.h>
 #include "delay.h"
 
 void DelayXms(unsigned int xms)

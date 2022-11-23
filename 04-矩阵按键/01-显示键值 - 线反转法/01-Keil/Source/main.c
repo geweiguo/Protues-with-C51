@@ -4,7 +4,7 @@
 ÐÞ¶©ÈÕÆÚ£º2022-11-19
 ÐÞ¶©°æ±¾£ºV01
 **********************************************/
-#include <reg51.h>
+#include <reg52.h>
 #include "matrixkey.h"
 #include "display.h"
 
@@ -13,16 +13,16 @@ void main()
 {
     while(1)
     {
-        MatrixKey_Scan();
-
-        LEDBuf[0] = 22;
-        LEDBuf[1] = 22;
-        LEDBuf[2] = 22;
-        LEDBuf[3] = 22;
-        LEDBuf[4] = 22;
-        LEDBuf[5] = 22;
-        LEDBuf[6] = KeyNum;
-        LEDBuf[7] = 22;
+//        MatrixKey_Scan();
+//
+//        LEDBuf[0] = 22;
+//        LEDBuf[1] = 22;
+//        LEDBuf[2] = 22;
+//        LEDBuf[3] = 22;
+//        LEDBuf[4] = 22;
+//        LEDBuf[5] = 22;
+//        LEDBuf[6] = 22;
+//        LEDBuf[7] = KeyNum;
 
         Display();
     }

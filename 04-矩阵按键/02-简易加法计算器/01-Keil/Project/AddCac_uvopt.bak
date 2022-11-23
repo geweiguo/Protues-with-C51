@@ -144,9 +144,36 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDP51</Key>
-          <Name>(98=-1,-1,-1,-1,0)(82=-1,-1,-1,-1,0)(83=1342,321,1540,426,1)(84=-1,-1,-1,-1,0)(85=-1,-1,-1,-1,0)(80=-1,-1,-1,-1,0)(91=-1,-1,-1,-1,0)(92=-1,-1,-1,-1,0)</Name>
+          <Name>(98=-1,-1,-1,-1,0)(82=-1,-1,-1,-1,0)(83=938,304,1136,409,1)(84=-1,-1,-1,-1,0)(85=-1,-1,-1,-1,0)(80=-1,-1,-1,-1,0)(91=-1,-1,-1,-1,0)(92=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Number1</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>KeyNum</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>LEDBuf[7]</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Result</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>MatrixKey_Scan()</ItemText>
+        </Ww>
+      </WatchWindow1>
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
@@ -189,10 +216,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>31</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>8</CurrentLine>
+      <CurrentLine>4</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\delay.c</PathWithFileName>
       <FilenameWithoutPath>delay.c</FilenameWithoutPath>
@@ -201,12 +228,12 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>32</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>49</TopLine>
-      <CurrentLine>49</CurrentLine>
+      <TopLine>127</TopLine>
+      <CurrentLine>127</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\display.c</PathWithFileName>
       <FilenameWithoutPath>display.c</FilenameWithoutPath>
@@ -217,24 +244,24 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>51</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>18</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <TopLine>28</TopLine>
+      <CurrentLine>51</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>4</FileNumber>
+      <FileNumber>0</FileNumber>
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>41</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>39</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\matrixkey.c</PathWithFileName>
       <FilenameWithoutPath>matrixkey.c</FilenameWithoutPath>
@@ -242,7 +269,59 @@
   </Group>
 
   <AlienFiles>
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DISPLAY.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>9</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
     <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\MATRIXKEY.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>8</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DELAY.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>1</CurrentLine>
     <Constant>0</Constant>
@@ -268,9 +347,9 @@
   </AlienFiles>
 
   <WinLayout>
-    <sActiveDebugView></sActiveDebugView>
-    <iActiveDebugViewLocation>0</iActiveDebugViewLocation>
-    <sActiveBuildView></sActiveBuildView>
+    <sActiveDebugView>默认</sActiveDebugView>
+    <iActiveDebugViewLocation>1</iActiveDebugViewLocation>
+    <sActiveBuildView>Build</sActiveBuildView>
     <iActiveBuildViewLocation>0</iActiveBuildViewLocation>
     <View>
       <ViewName>默认</ViewName>
@@ -387,10 +466,10 @@
         <DockType>2</DockType>
         <DockLocation>4</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -405,17 +484,17 @@
         <ItemNo>6</ItemNo>
         <Name>指令</Name>
         <AnchorWinID>197</AnchorWinID>
-        <AnchorWinName>编译输出</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -430,17 +509,17 @@
         <ItemNo>7</ItemNo>
         <Name>批量查找</Name>
         <AnchorWinID>198</AnchorWinID>
-        <AnchorWinName>指令</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -455,17 +534,17 @@
         <ItemNo>8</ItemNo>
         <Name>Browse</Name>
         <AnchorWinID>199</AnchorWinID>
-        <AnchorWinName>批量查找</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -480,17 +559,17 @@
         <ItemNo>9</ItemNo>
         <Name>UART #1</Name>
         <AnchorWinID>38007</AnchorWinID>
-        <AnchorWinName>浏览</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -505,17 +584,17 @@
         <ItemNo>10</ItemNo>
         <Name>UART #2</Name>
         <AnchorWinID>1939</AnchorWinID>
-        <AnchorWinName>UART #1</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -530,17 +609,17 @@
         <ItemNo>11</ItemNo>
         <Name>UART #3</Name>
         <AnchorWinID>1940</AnchorWinID>
-        <AnchorWinName>UART #2</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -555,17 +634,17 @@
         <ItemNo>12</ItemNo>
         <Name>UART #4</Name>
         <AnchorWinID>1941</AnchorWinID>
-        <AnchorWinName>UART #3</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
         <DockType>4</DockType>
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
-        <DockedRect_top>908</DockedRect_top>
+        <DockedRect_top>1628</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>1118</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_bottom>1838</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -589,7 +668,7 @@
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
+        <DockedRect_bottom>1624</DockedRect_bottom>
         <DockedRect_right>210</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
@@ -605,7 +684,7 @@
         <ItemNo>14</ItemNo>
         <Name>书籍</Name>
         <AnchorWinID>1005</AnchorWinID>
-        <AnchorWinName>工程</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -614,7 +693,7 @@
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
+        <DockedRect_bottom>1624</DockedRect_bottom>
         <DockedRect_right>210</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
@@ -630,7 +709,7 @@
         <ItemNo>15</ItemNo>
         <Name>函数</Name>
         <AnchorWinID>109</AnchorWinID>
-        <AnchorWinName>书籍</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -639,7 +718,7 @@
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
+        <DockedRect_bottom>1624</DockedRect_bottom>
         <DockedRect_right>210</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
@@ -655,7 +734,7 @@
         <ItemNo>16</ItemNo>
         <Name>模板</Name>
         <AnchorWinID>195</AnchorWinID>
-        <AnchorWinName>函数</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -664,7 +743,7 @@
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
+        <DockedRect_bottom>1624</DockedRect_bottom>
         <DockedRect_right>210</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
@@ -680,7 +759,7 @@
         <ItemNo>17</ItemNo>
         <Name>寄存器</Name>
         <AnchorWinID>196</AnchorWinID>
-        <AnchorWinName>模板</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -689,7 +768,7 @@
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>0</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
+        <DockedRect_bottom>1624</DockedRect_bottom>
         <DockedRect_right>210</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
@@ -713,9 +792,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -730,7 +809,7 @@
         <ItemNo>19</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35885</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -738,9 +817,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -755,7 +834,7 @@
         <ItemNo>20</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35886</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -763,9 +842,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -780,7 +859,7 @@
         <ItemNo>21</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35887</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -788,9 +867,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -805,7 +884,7 @@
         <ItemNo>22</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35888</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -813,9 +892,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -830,7 +909,7 @@
         <ItemNo>23</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35889</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -838,9 +917,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -855,7 +934,7 @@
         <ItemNo>24</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35890</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -863,9 +942,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -880,7 +959,7 @@
         <ItemNo>25</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35891</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -888,9 +967,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -905,7 +984,7 @@
         <ItemNo>26</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35892</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -913,9 +992,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -930,7 +1009,7 @@
         <ItemNo>27</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35893</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -938,9 +1017,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -955,7 +1034,7 @@
         <ItemNo>28</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35894</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -963,9 +1042,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -980,7 +1059,7 @@
         <ItemNo>29</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35895</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -988,9 +1067,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1005,7 +1084,7 @@
         <ItemNo>30</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35896</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1013,9 +1092,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1030,7 +1109,7 @@
         <ItemNo>31</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35897</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1038,9 +1117,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1055,7 +1134,7 @@
         <ItemNo>32</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35898</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1063,9 +1142,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1080,7 +1159,7 @@
         <ItemNo>33</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35899</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1088,9 +1167,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1105,7 +1184,7 @@
         <ItemNo>34</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35900</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1113,9 +1192,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1130,7 +1209,7 @@
         <ItemNo>35</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35901</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1138,9 +1217,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1155,7 +1234,7 @@
         <ItemNo>36</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35902</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1163,9 +1242,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1180,7 +1259,7 @@
         <ItemNo>37</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35903</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1188,9 +1267,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1205,7 +1284,7 @@
         <ItemNo>38</ItemNo>
         <Name>not set</Name>
         <AnchorWinID>35904</AnchorWinID>
-        <AnchorWinName>???</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1213,9 +1292,9 @@
         <DockLocation>2</DockLocation>
         <Pinned>0</Pinned>
         <DockedRect_top>76</DockedRect_top>
-        <DockedRect_left>1710</DockedRect_left>
-        <DockedRect_bottom>904</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_left>990</DockedRect_left>
+        <DockedRect_bottom>1624</DockedRect_bottom>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>600</FloatingRect_bottom>
@@ -1240,7 +1319,7 @@
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>214</DockedRect_left>
         <DockedRect_bottom>190</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -1255,7 +1334,7 @@
         <ItemNo>40</ItemNo>
         <Name>指令跟踪</Name>
         <AnchorWinID>203</AnchorWinID>
-        <AnchorWinName>反汇编</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1265,7 +1344,7 @@
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>214</DockedRect_left>
         <DockedRect_bottom>190</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -1280,7 +1359,7 @@
         <ItemNo>41</ItemNo>
         <Name>性能分析器</Name>
         <AnchorWinID>1913</AnchorWinID>
-        <AnchorWinName>指令跟踪</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1290,7 +1369,7 @@
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>214</DockedRect_left>
         <DockedRect_bottom>190</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -1305,7 +1384,7 @@
         <ItemNo>42</ItemNo>
         <Name>性能分析器</Name>
         <AnchorWinID>343</AnchorWinID>
-        <AnchorWinName>性能分析器</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1315,7 +1394,7 @@
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>214</DockedRect_left>
         <DockedRect_bottom>190</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -1330,7 +1409,7 @@
         <ItemNo>43</ItemNo>
         <Name>代码作用范围</Name>
         <AnchorWinID>204</AnchorWinID>
-        <AnchorWinName>性能分析器</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1340,7 +1419,7 @@
         <DockedRect_top>76</DockedRect_top>
         <DockedRect_left>214</DockedRect_left>
         <DockedRect_bottom>190</DockedRect_bottom>
-        <DockedRect_right>1920</DockedRect_right>
+        <DockedRect_right>1200</DockedRect_right>
         <FloatingRect_top>0</FloatingRect_top>
         <FloatingRect_left>0</FloatingRect_left>
         <FloatingRect_bottom>250</FloatingRect_bottom>
@@ -1366,10 +1445,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1380,7 +1459,7 @@
         <ItemNo>45</ItemNo>
         <Name>调用堆栈</Name>
         <AnchorWinID>1944</AnchorWinID>
-        <AnchorWinName>调用堆栈</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1391,10 +1470,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1405,7 +1484,7 @@
         <ItemNo>46</ItemNo>
         <Name>Locals</Name>
         <AnchorWinID>1507</AnchorWinID>
-        <AnchorWinName>调用堆栈</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1416,13 +1495,13 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
-        <Visible>0</Visible>
+        <Visible>1</Visible>
         <Dynamic>0</Dynamic>
       </Window>
       <Window>
@@ -1430,7 +1509,7 @@
         <ItemNo>47</ItemNo>
         <Name>Watch 1</Name>
         <AnchorWinID>1935</AnchorWinID>
-        <AnchorWinName>Locals</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1441,13 +1520,13 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
-        <ActiveTab>0</ActiveTab>
-        <Visible>0</Visible>
+        <ActiveTab>1</ActiveTab>
+        <Visible>1</Visible>
         <Dynamic>0</Dynamic>
       </Window>
       <Window>
@@ -1455,7 +1534,7 @@
         <ItemNo>48</ItemNo>
         <Name>Watch 2</Name>
         <AnchorWinID>1936</AnchorWinID>
-        <AnchorWinName>Watch 1</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1466,10 +1545,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1480,7 +1559,7 @@
         <ItemNo>49</ItemNo>
         <Name>Memory 1</Name>
         <AnchorWinID>1937</AnchorWinID>
-        <AnchorWinName>Watch 2</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1491,10 +1570,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1505,7 +1584,7 @@
         <ItemNo>50</ItemNo>
         <Name>Memory 2</Name>
         <AnchorWinID>1465</AnchorWinID>
-        <AnchorWinName>Memory 1</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1516,10 +1595,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1530,7 +1609,7 @@
         <ItemNo>51</ItemNo>
         <Name>Memory 3</Name>
         <AnchorWinID>1466</AnchorWinID>
-        <AnchorWinName>Memory 2</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1541,10 +1620,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1555,7 +1634,7 @@
         <ItemNo>52</ItemNo>
         <Name>Memory 4</Name>
         <AnchorWinID>1467</AnchorWinID>
-        <AnchorWinName>Memory 3</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1566,10 +1645,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1580,7 +1659,7 @@
         <ItemNo>53</ItemNo>
         <Name>符号</Name>
         <AnchorWinID>1468</AnchorWinID>
-        <AnchorWinName>Memory 4</AnchorWinName>
+        <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
         <OtherWinName></OtherWinName>
         <WinType>1</WinType>
@@ -1591,10 +1670,10 @@
         <DockedRect_left>962</DockedRect_left>
         <DockedRect_bottom>1118</DockedRect_bottom>
         <DockedRect_right>1920</DockedRect_right>
-        <FloatingRect_top>359</FloatingRect_top>
-        <FloatingRect_left>-496</FloatingRect_left>
-        <FloatingRect_bottom>959</FloatingRect_bottom>
-        <FloatingRect_right>-119</FloatingRect_right>
+        <FloatingRect_top>139</FloatingRect_top>
+        <FloatingRect_left>-1124</FloatingRect_left>
+        <FloatingRect_bottom>739</FloatingRect_bottom>
+        <FloatingRect_right>-747</FloatingRect_right>
         <ContainerPercent>100</ContainerPercent>
         <ActiveTab>0</ActiveTab>
         <Visible>0</Visible>
@@ -1612,33 +1691,45 @@
       <Documents>
         <Doc>
           <Name>..\Source\main.c</Name>
-          <ColumnNumber>63</ColumnNumber>
-          <TopLine>18</TopLine>
-          <CurrentLine>42</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\Source\matrixkey.c</Name>
-          <ColumnNumber>41</ColumnNumber>
-          <TopLine>13</TopLine>
-          <CurrentLine>39</CurrentLine>
+          <ColumnNumber>53</ColumnNumber>
+          <TopLine>28</TopLine>
+          <CurrentLine>51</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\Source\display.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>49</TopLine>
-          <CurrentLine>49</CurrentLine>
+          <ColumnNumber>32</ColumnNumber>
+          <TopLine>127</TopLine>
+          <CurrentLine>127</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\Source\delay.c</Name>
-          <ColumnNumber>0</ColumnNumber>
+          <Name>..\SOURCE\DISPLAY.H</Name>
+          <ColumnNumber>11</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>9</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\Source\matrixkey.c</Name>
+          <ColumnNumber>22</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\MATRIXKEY.H</Name>
+          <ColumnNumber>33</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>8</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\SOURCE\MATRIXKEY.H</Name>
+          <Name>..\SOURCE\DELAY.H</Name>
           <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\Source\delay.c</Name>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

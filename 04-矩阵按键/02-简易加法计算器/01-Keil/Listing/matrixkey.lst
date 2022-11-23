@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MATRIXKEY                                                             11/20/2022 23:47:34 PAGE 1   
+C51 COMPILER V9.01   MATRIXKEY                                                             11/23/2022 20:39:44 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MATRIXKEY
@@ -9,51 +9,51 @@ COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\matri
 line level    source
 
    1          #include "matrixkey.h"
-   2          
-   3          unsigned char KeyNum = 22;
-   4          unsigned char Temp1 = 0; //高4位
-   5          unsigned char Temp2 = 0;
-   6          
-   7          void MatrixKey_Scan(void)
-   8          {   
-   9   1         KEYPort = 0xf0;//4行做输出  4列做输入  输出“0”  输入 “1”
-  10   1         Temp1 = KEYPort;
-  11   1         if(KEYPort != 0xf0)
-  12   1         {
-  13   2              DelayXms(10);
-  14   2              if(KEYPort != 0xf0)
-  15   2              {
-  16   3                  Temp1 = KEYPort & 0xf0;     //示例Temp1： 1110 0000 、1101 0000 、1011 0000 、0111 0000
-  17   3                  KEYPort = 0x0f;
-  18   3                  Temp2 = KEYPort & 0x0f;    //示例Temp2： 0000 1110 、0000 1101 、0000 1011 、0000 0111 
-  19   3              }   
-  20   2         }
-  21   1      
-  22   1         switch (Temp1 + Temp2)     
-  23   1         {
-  24   2            case 0xee: KeyNum = 1;break;
-  25   2            case 0xed: KeyNum = 2;break;
-  26   2            case 0xeb: KeyNum = 3;break;
-  27   2            case 0xe7: KeyNum = 4;break;
-  28   2            case 0xde: KeyNum = 5;break;
-  29   2            case 0xdd: KeyNum = 6;break;
-  30   2            case 0xdb: KeyNum = 7;break;
-  31   2            case 0xd7: KeyNum = 8;break;
-  32   2            case 0xbe: KeyNum = 9;break;
-  33   2            case 0xbd: KeyNum = 0;break;
-  34   2            case 0xbb: KeyNum = 10;break;
-  35   2            case 0xb7: KeyNum = 11;break;
-  36   2            case 0x7e: KeyNum = 12;break;
-  37   2            case 0x7d: KeyNum = 13;break;
-  38   2            case 0x7b: KeyNum = 14;break;
-  39   2            case 0x77: KeyNum = 15;break; 
-  40   2            default:break;  
-  41   2         }
+   2          unsigned char Temp1 = 0; //高4位
+   3          unsigned char Temp2 = 0;
+   4          
+   5          unsigned char MatrixKey_Scan(void)
+   6          {  
+   7   1         static unsigned char KeyNum = 22;
+   8   1         KEYPort = 0xf0;//4行做输出  4列做输入  输出“0”  输入 “1”
+   9   1         Temp1 = KEYPort;
+  10   1         if(KEYPort != 0xf0)
+  11   1         {
+  12   2              DelayXms(10);
+  13   2              if(KEYPort != 0xf0)
+  14   2              {
+  15   3                  Temp1 = KEYPort & 0xf0;     //示例Temp1： 1110 0000 、1101 0000 、1011 0000 、0111 0000
+  16   3                  KEYPort = 0x0f;
+  17   3                  Temp2 = KEYPort & 0x0f;    //示例Temp2： 0000 1110 、0000 1101 、0000 1011 、0000 0111 
+  18   3              }   
+  19   2         }
+  20   1      
+  21   1         switch (Temp1 + Temp2)     
+  22   1         {
+  23   2            case 0xee: KeyNum = 1;break;
+  24   2            case 0xed: KeyNum = 2;break;
+  25   2            case 0xeb: KeyNum = 3;break;
+  26   2            case 0xe7: KeyNum = 4;break;
+  27   2            case 0xde: KeyNum = 5;break;
+  28   2            case 0xdd: KeyNum = 6;break;
+  29   2            case 0xdb: KeyNum = 7;break;
+  30   2            case 0xd7: KeyNum = 8;break;
+  31   2            case 0xbe: KeyNum = 9;break;
+  32   2            case 0xbd: KeyNum = 0;break;
+  33   2            case 0xbb: KeyNum = 10;break;
+  34   2            case 0xb7: KeyNum = 11;break;
+  35   2            case 0x7e: KeyNum = 12;break;
+  36   2            case 0x7d: KeyNum = 13;break;
+  37   2            case 0x7b: KeyNum = 14;break;
+  38   2            case 0x77: KeyNum = 15;break; 
+  39   2            default:break;  
+  40   2         }
+  41   1          return KeyNum;
   42   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    163    ----
+   CODE SIZE        =    180    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
