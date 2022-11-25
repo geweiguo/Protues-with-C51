@@ -1,0 +1,4 @@
+"..\Output\display.obj",
+"..\Output\main.obj" 
+TO "..\Output\PWM" 
+PRINT("..\Listing\PWM.m51") DISABLEWARNING (16) 

@@ -1,0 +1,4 @@
+"..\Output\display.obj",
+"..\Output\main.obj" 
+TO "..\Output\Cnt and check" 
+PRINT("..\Listing\Cnt and check.m51") DISABLEWARNING (16) 

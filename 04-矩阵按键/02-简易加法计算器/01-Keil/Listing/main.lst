@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MAIN                                                                  11/23/2022 20:39:44 PAGE 1   
+C51 COMPILER V9.01   MAIN                                                                  11/24/2022 10:25:27 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
@@ -15,156 +15,240 @@ line level    source
    5          
    6          unsigned char KeypressFlag = 0;
    7          unsigned char DisNumFlag = 0;
-   8          unsigned char Num = 0; 
-   9          unsigned int temp = 0;
-  10          unsigned int Number1 = 0;
-  11          unsigned int Result = 0;
-  12          
-  13          void Distemp_Service();
-  14          void DisNumber1_Service();
-  15          void DisResult_Service();
-  16          
-  17          void INT0_int()
-  18          {
-  19   1          IT0 = 1;
-  20   1          EX0 = 1;
-  21   1          EA  = 1;
-  22   1      
-  23   1      }
-  24          
-  25          void ESR_INT0() interrupt 0
-  26          {
-  27   1         DelayXms(10);
-  28   1         if(0 == INT0)
-  29   1         {
-  30   2            KeypressFlag = 1;
-  31   2         }
-  32   1        
-  33   1      
-  34   1      }
-  35          
-  36          
-  37          void main()
-  38          {  
-  39   1         unsigned char Addflag = 0;
-  40   1         INT0_int();
-  41   1         P1 = 0x0f;
-  42   1      
-  43   1         while(1)
-  44   1         {    
-  45   2             if(KeypressFlag == 1)
-  46   2             {
-  47   3                KeypressFlag = 0;
-  48   3                
-  49   3                switch(MatrixKey_Scan())
-  50   3                 {
-  51   4                    case 0:  if(1 == Addflag) {temp = 0;}
-  52   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;Addflag  = 1;break;
-  53   4                    case 1:  if(!Addflag) {temp = 1;Addflag  = 1;}
-  54   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-C51 COMPILER V9.01   MAIN                                                                  11/23/2022 20:39:44 PAGE 2   
+   8          unsigned char AddFlag = 0;
+   9          unsigned char SubFlag = 0;
+  10          unsigned char MulNumFlag = 0;
+  11          unsigned char DivNumFlag = 0;
+  12          unsigned char Keyflag = 0;
+  13          unsigned char Num = 0; 
+  14          unsigned int temp = 0;
+  15          unsigned int Number1 = 0;
+  16          unsigned int Result = 0;
+  17          
+  18          void Distemp_Service();
+  19          void DisNumber1_Service();
+  20          void DisResult_Service();
+  21          
+  22          void INT0_int()
+  23          {
+  24   1          IT0 = 1;
+  25   1          EX0 = 1;
+  26   1          EA  = 1;
+  27   1      
+  28   1      }
+  29          
+  30          void ESR_INT0() interrupt 0
+  31          {
+  32   1         DelayXms(10);
+  33   1         if(0 == INT0)
+  34   1         {
+  35   2            KeypressFlag = 1;
+  36   2         }
+  37   1        
+  38   1      
+  39   1      }
+  40          
+  41          
+  42          void main()
+  43          {  
+  44   1      
+  45   1         INT0_int();
+  46   1         P1 = 0x0f;
+  47   1      
+  48   1         while(1)
+  49   1         {    
+  50   2             if(KeypressFlag == 1)
+  51   2             {
+  52   3                KeypressFlag = 0;
+  53   3                
+  54   3                switch(MatrixKey_Scan())
+C51 COMPILER V9.01   MAIN                                                                  11/24/2022 10:25:27 PAGE 2   
 
-  55   4                    case 2:  if(!Addflag) {temp = 2;Addflag  = 1;}
-  56   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  57   4                    case 3:  if(!Addflag) {temp = 3;Addflag  = 1;}
-  58   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  59   4                    case 4:  if(!Addflag) {temp = 4;Addflag  = 1;}
-  60   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  61   4                    case 5:  if(!Addflag) {temp = 5;Addflag  = 1;}
-  62   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  63   4                    case 6:  if(!Addflag) {temp = 6;Addflag  = 1;}
-  64   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  65   4                    case 7:  if(!Addflag) {temp = 7;Addflag  = 1;}
-  66   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  67   4                    case 8:  if(!Addflag) {temp = 8;Addflag  = 1;}
-  68   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  69   4                    case 9:  if(!Addflag) {temp = 9;Addflag  = 1;}
-  70   4                             else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-  71   4              
-  72   4                    case 12: Number1 = temp; temp = 0;Addflag  = 0;
-  73   4                             DisNumFlag = 25;
-  74   4                             break;
-  75   4                    case 14: Number1 = 0; temp = 0;Addflag  = 0;
-  76   4                             DisNumFlag = 25;
-  77   4                             break;
-  78   4          
-  79   4                    case 15: Result = Number1 + temp; Addflag  = 0;
-  80   4                             DisNumFlag = 30;
-  81   4                             break;
-  82   4              
-  83   4                    default: break;       
-  84   4                  }
-  85   3                  
-  86   3                                   
-  87   3                  if(22 == DisNumFlag) 
-  88   3                      {
-  89   4                       Distemp_Service(); 
-  90   4                      } 
-  91   3                  if(25 == DisNumFlag) 
-  92   3                      {
-  93   4                       DisNumber1_Service(); 
-  94   4                      } 
-  95   3                  if(30 == DisNumFlag) 
-  96   3                      {
-  97   4                       DisResult_Service(); 
-  98   4                      }  
-  99   3             
- 100   3             }
- 101   2                              
- 102   2             Display(); 
- 103   2              
- 104   2          }
- 105   1      }
- 106          
- 107          void Distemp_Service()
- 108          {
- 109   1             LEDBuf[0] = 22;
- 110   1             LEDBuf[1] = temp/1000000;
- 111   1             LEDBuf[2] = temp/100000%10;
- 112   1             LEDBuf[3] = temp/10000%10;
- 113   1             LEDBuf[4] = temp/1000%10;
- 114   1             LEDBuf[5] = temp/100%10;
- 115   1             LEDBuf[6] = temp/10%10;
- 116   1             LEDBuf[7] = temp%10;
-C51 COMPILER V9.01   MAIN                                                                  11/23/2022 20:39:44 PAGE 3   
+  55   3                 {
+  56   4                    case 0:  temp = (temp*10 + MatrixKey_Scan());
+  57   4                             Keyflag  = 1;
+  58   4                             DisNumFlag = 22;
+  59   4                             break;
+  60   4                    case 1:  
+  61   4                    case 2:  
+  62   4                    case 3:  
+  63   4                    case 4:  
+  64   4                    case 5:  
+  65   4                    case 6:  
+  66   4                    case 7:  
+  67   4                    case 8:  
+  68   4                    case 9:  if(0 == Keyflag) 
+  69   4                                 {temp = MatrixKey_Scan();Keyflag  = 1;}
+  70   4                             else if(1 == Keyflag) 
+  71   4                                 {temp = temp*10 + MatrixKey_Scan(); }
+  72   4                             DisNumFlag = 22;
+  73   4                             break;
+  74   4              
+  75   4                    case 10: Number1 = temp;
+  76   4                             AddFlag = 1;                     
+  77   4                             temp = 0;Keyflag  = 0;
+  78   4                             DisNumFlag = 25;  //加法
+  79   4                             break;
+  80   4                    case 11: Number1 = temp;
+  81   4                             SubFlag = 1;
+  82   4                             //Result = Number1 - temp; 
+  83   4                             temp = 0;Keyflag  = 0;
+  84   4                             DisNumFlag = 25;  //减法
+  85   4                             break;
+  86   4                    case 13: Number1 = temp;
+  87   4                             MulNumFlag = 1;
+  88   4                             //Result = Number1 * temp; 
+  89   4                             temp = 0;Keyflag  = 0;
+  90   4                             DisNumFlag = 25;  //乘法
+  91   4                             break;
+  92   4                    case 14: Number1 = temp;
+  93   4                             DivNumFlag = 1;
+  94   4                             //Result = Number1 / temp; 
+  95   4                             temp = 0;Keyflag  = 0;
+  96   4                             DisNumFlag = 25;  //除法
+  97   4                             break;
+  98   4      
+  99   4                    case 12: Number1 = 0; temp = 0;Keyflag  = 0;
+ 100   4                             DisNumFlag = 25; //清零
+ 101   4                             break;
+ 102   4          
+ 103   4                    case 15: if(AddFlag == 1)
+ 104   4                                {
+ 105   5                                  AddFlag = 0;
+ 106   5                                  Result = Number1 + temp; 
+ 107   5                                }
+ 108   4                                  
+ 109   4                             if(SubFlag == 1)
+ 110   4                                 {
+ 111   5                                  SubFlag = 0;
+ 112   5                                  Result = Number1 - temp;
+ 113   5                                 }
+ 114   4                                  
+ 115   4                             if(MulNumFlag == 1)
+ 116   4                                  {
+C51 COMPILER V9.01   MAIN                                                                  11/24/2022 10:25:27 PAGE 3   
 
- 117   1      
- 118   1      }
- 119          void DisNumber1_Service()
- 120          {
- 121   1             LEDBuf[0] = 22;
- 122   1             LEDBuf[1] = Number1/1000000;
- 123   1             LEDBuf[2] = Number1/100000%10;
- 124   1             LEDBuf[3] = Number1/10000%10;
- 125   1             LEDBuf[4] = Number1/1000%10;
- 126   1             LEDBuf[5] = Number1/100%10;
- 127   1             LEDBuf[6] = Number1/10%10;
- 128   1             LEDBuf[7] = Number1%10;
- 129   1      
- 130   1      }
- 131          void DisResult_Service()
- 132          {
- 133   1             LEDBuf[0] = 22;
- 134   1             LEDBuf[1] = Result/1000000;
- 135   1             LEDBuf[2] = Result/100000%10;
- 136   1             LEDBuf[3] = Result/10000%10;
- 137   1             LEDBuf[4] = Result/1000%10;
- 138   1             LEDBuf[5] = Result/100%10;
- 139   1             LEDBuf[6] = Result/10%10;
- 140   1             LEDBuf[7] = Result%10;
- 141   1      
- 142   1      }       
- 143          
- 144          
- 145          
+ 117   5                                   MulNumFlag = 0;
+ 118   5                                   Result = Number1 * temp; 
+ 119   5                                  }
+ 120   4                                  
+ 121   4                             if(DivNumFlag == 1)
+ 122   4                                  {
+ 123   5                                   DivNumFlag = 0;
+ 124   5                                   Result = Number1 / temp; 
+ 125   5                                  }
+ 126   4                                                              
+ 127   4                              Keyflag  = 0;
+ 128   4                              DisNumFlag = 30;
+ 129   4                             break;  //输出计算结果
+ 130   4              
+ 131   4                    default: break;       
+ 132   4                  }
+ 133   3                  
+ 134   3                                   
+ 135   3                  if(22 == DisNumFlag) 
+ 136   3                      {
+ 137   4                       Distemp_Service(); 
+ 138   4                      } 
+ 139   3                  if(25 == DisNumFlag) 
+ 140   3                      {
+ 141   4                       DisNumber1_Service(); 
+ 142   4                      } 
+ 143   3                  if(30 == DisNumFlag) 
+ 144   3                      {
+ 145   4                       DisResult_Service(); 
+ 146   4                      }  
+ 147   3             
+ 148   3             }
+ 149   2                              
+ 150   2             Display(); 
+ 151   2              
+ 152   2          }
+ 153   1      }
+ 154          
+ 155          void Distemp_Service()
+ 156          {
+ 157   1             LEDBuf[0] = 23;
+ 158   1             LEDBuf[1] = 23;
+ 159   1             LEDBuf[2] = 23;
+ 160   1      
+ 161   1              if(temp >= 10000) { LEDBuf[3] = temp/10000%10;}
+ 162   1              else LEDBuf[3] = 23;
+ 163   1      
+ 164   1              if(temp >= 1000){LEDBuf[4] = temp/1000%10;}
+ 165   1              else LEDBuf[4] = 23;
+ 166   1      
+ 167   1              if(temp >= 100){ LEDBuf[5] = temp/100%10;}
+ 168   1              else LEDBuf[5] = 23;
+ 169   1      
+ 170   1              if(temp >= 10){ LEDBuf[6] = temp/10%10;}
+ 171   1              else LEDBuf[6] = 23;
+ 172   1      
+ 173   1      
+ 174   1             LEDBuf[7] = temp%10;
+ 175   1      
+ 176   1      }
+ 177          void DisNumber1_Service()
+ 178          {
+C51 COMPILER V9.01   MAIN                                                                  11/24/2022 10:25:27 PAGE 4   
+
+ 179   1             LEDBuf[0] = 23;
+ 180   1             LEDBuf[1] = 23;
+ 181   1             LEDBuf[2] = 23;
+ 182   1                    
+ 183   1             if(Number1 >= 10000)    
+ 184   1                  {LEDBuf[3] = Number1/10000%10;}
+ 185   1             else   LEDBuf[3] = 23;
+ 186   1             
+ 187   1             if(Number1 >= 1000) 
+ 188   1                  {LEDBuf[4] = Number1/1000%10;}
+ 189   1             else   LEDBuf[4] = 23;
+ 190   1      
+ 191   1             if(Number1 >= 100) 
+ 192   1                  {LEDBuf[5] = Number1/100%10;}
+ 193   1             else   LEDBuf[5] = 23;
+ 194   1      
+ 195   1             if(Number1 >= 10) 
+ 196   1                  {LEDBuf[6] = Number1/10%10;}
+ 197   1             else   LEDBuf[6] = 23;
+ 198   1             LEDBuf[7] = Number1%10;
+ 199   1      
+ 200   1      }
+ 201          void DisResult_Service()
+ 202          {
+ 203   1             LEDBuf[0] = 23;
+ 204   1             LEDBuf[1] = 23;
+ 205   1             LEDBuf[2] = 23;
+ 206   1             
+ 207   1             if(Result >= 10000)    
+ 208   1                  LEDBuf[3] = Result/10000%10;
+ 209   1             else   LEDBuf[3] = 23;
+ 210   1             
+ 211   1             if(Result >= 1000) 
+ 212   1                  LEDBuf[4] = Result/1000%10;
+ 213   1             else   LEDBuf[4] = 23;
+ 214   1      
+ 215   1             if(Result >= 100) 
+ 216   1                  LEDBuf[5] = Result/100%10;
+ 217   1             else   LEDBuf[5] = 23;
+ 218   1      
+ 219   1             if(Result >= 10) 
+ 220   1                  LEDBuf[6] = Result/10%10;
+ 221   1             else   LEDBuf[6] = 23;
+ 222   1             LEDBuf[7] = Result%10;
+ 223   1      
+ 224   1      }       
+ 225          
+ 226          
+ 227          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =   1108    ----
+   CODE SIZE        =    930    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      9       1
+   DATA SIZE        =     14    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.

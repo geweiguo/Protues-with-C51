@@ -1,0 +1,4 @@
+"..\Output\main.obj",
+"..\Output\display.obj" 
+TO "..\Output\INT" 
+PRINT("..\Listing\INT.m51")

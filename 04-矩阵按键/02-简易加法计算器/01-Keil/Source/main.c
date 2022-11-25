@@ -5,6 +5,11 @@
 
 unsigned char KeypressFlag = 0;
 unsigned char DisNumFlag = 0;
+unsigned char AddFlag = 0;
+unsigned char SubFlag = 0;
+unsigned char MulNumFlag = 0;
+unsigned char DivNumFlag = 0;
+unsigned char Keyflag = 0;
 unsigned char Num = 0; 
 unsigned int temp = 0;
 unsigned int Number1 = 0;
@@ -36,7 +41,7 @@ void ESR_INT0() interrupt 0
 
 void main()
 {  
-   unsigned char Addflag = 0;
+
    INT0_int();
    P1 = 0x0f;
 
@@ -48,37 +53,80 @@ void main()
           
           switch(MatrixKey_Scan())
            {
-              case 0:  if(1 == Addflag) {temp = 0;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;Addflag  = 1;break;
-              case 1:  if(!Addflag) {temp = 1;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 2:  if(!Addflag) {temp = 2;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 3:  if(!Addflag) {temp = 3;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 4:  if(!Addflag) {temp = 4;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 5:  if(!Addflag) {temp = 5;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 6:  if(!Addflag) {temp = 6;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 7:  if(!Addflag) {temp = 7;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 8:  if(!Addflag) {temp = 8;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-              case 9:  if(!Addflag) {temp = 9;Addflag  = 1;}
-                       else {temp = temp*10 + MatrixKey_Scan(); }DisNumFlag = 22;break;
-        
-              case 12: Number1 = temp; temp = 0;Addflag  = 0;
-                       DisNumFlag = 25;
+              case 0:  temp = (temp*10 + MatrixKey_Scan());
+                       Keyflag  = 1;
+                       DisNumFlag = 22;
                        break;
-              case 14: Number1 = 0; temp = 0;Addflag  = 0;
-                       DisNumFlag = 25;
+              case 1:  
+              case 2:  
+              case 3:  
+              case 4:  
+              case 5:  
+              case 6:  
+              case 7:  
+              case 8:  
+              case 9:  if(0 == Keyflag) 
+                           {temp = MatrixKey_Scan();Keyflag  = 1;}
+                       else if(1 == Keyflag) 
+                           {temp = temp*10 + MatrixKey_Scan(); }
+                       DisNumFlag = 22;
+                       break;
+        
+              case 10: Number1 = temp;
+                       AddFlag = 1;                     
+                       temp = 0;Keyflag  = 0;
+                       DisNumFlag = 25;  //加法
+                       break;
+              case 11: Number1 = temp;
+                       SubFlag = 1;
+                       //Result = Number1 - temp; 
+                       temp = 0;Keyflag  = 0;
+                       DisNumFlag = 25;  //减法
+                       break;
+              case 13: Number1 = temp;
+                       MulNumFlag = 1;
+                       //Result = Number1 * temp; 
+                       temp = 0;Keyflag  = 0;
+                       DisNumFlag = 25;  //乘法
+                       break;
+              case 14: Number1 = temp;
+                       DivNumFlag = 1;
+                       //Result = Number1 / temp; 
+                       temp = 0;Keyflag  = 0;
+                       DisNumFlag = 25;  //除法
+                       break;
+
+              case 12: Number1 = 0; temp = 0;Keyflag  = 0;
+                       DisNumFlag = 25; //清零
                        break;
     
-              case 15: Result = Number1 + temp; Addflag  = 0;
-                       DisNumFlag = 30;
-                       break;
+              case 15: if(AddFlag == 1)
+                          {
+                            AddFlag = 0;
+                            Result = Number1 + temp; 
+                          }
+                            
+                       if(SubFlag == 1)
+                           {
+                            SubFlag = 0;
+                            Result = Number1 - temp;
+                           }
+                            
+                       if(MulNumFlag == 1)
+                            {
+                             MulNumFlag = 0;
+                             Result = Number1 * temp; 
+                            }
+                            
+                       if(DivNumFlag == 1)
+                            {
+                             DivNumFlag = 0;
+                             Result = Number1 / temp; 
+                            }
+                                                        
+                        Keyflag  = 0;
+                        DisNumFlag = 30;
+                       break;  //输出计算结果
         
               default: break;       
             }
@@ -106,37 +154,71 @@ void main()
 
 void Distemp_Service()
 {
-       LEDBuf[0] = 22;
-       LEDBuf[1] = temp/1000000;
-       LEDBuf[2] = temp/100000%10;
-       LEDBuf[3] = temp/10000%10;
-       LEDBuf[4] = temp/1000%10;
-       LEDBuf[5] = temp/100%10;
-       LEDBuf[6] = temp/10%10;
+       LEDBuf[0] = 23;
+       LEDBuf[1] = 23;
+       LEDBuf[2] = 23;
+
+        if(temp >= 10000) { LEDBuf[3] = temp/10000%10;}
+        else LEDBuf[3] = 23;
+
+        if(temp >= 1000){LEDBuf[4] = temp/1000%10;}
+        else LEDBuf[4] = 23;
+
+        if(temp >= 100){ LEDBuf[5] = temp/100%10;}
+        else LEDBuf[5] = 23;
+
+        if(temp >= 10){ LEDBuf[6] = temp/10%10;}
+        else LEDBuf[6] = 23;
+
+
        LEDBuf[7] = temp%10;
 
 }
 void DisNumber1_Service()
 {
-       LEDBuf[0] = 22;
-       LEDBuf[1] = Number1/1000000;
-       LEDBuf[2] = Number1/100000%10;
-       LEDBuf[3] = Number1/10000%10;
-       LEDBuf[4] = Number1/1000%10;
-       LEDBuf[5] = Number1/100%10;
-       LEDBuf[6] = Number1/10%10;
+       LEDBuf[0] = 23;
+       LEDBuf[1] = 23;
+       LEDBuf[2] = 23;
+              
+       if(Number1 >= 10000)    
+            {LEDBuf[3] = Number1/10000%10;}
+       else   LEDBuf[3] = 23;
+       
+       if(Number1 >= 1000) 
+            {LEDBuf[4] = Number1/1000%10;}
+       else   LEDBuf[4] = 23;
+
+       if(Number1 >= 100) 
+            {LEDBuf[5] = Number1/100%10;}
+       else   LEDBuf[5] = 23;
+
+       if(Number1 >= 10) 
+            {LEDBuf[6] = Number1/10%10;}
+       else   LEDBuf[6] = 23;
        LEDBuf[7] = Number1%10;
 
 }
 void DisResult_Service()
 {
-       LEDBuf[0] = 22;
-       LEDBuf[1] = Result/1000000;
-       LEDBuf[2] = Result/100000%10;
-       LEDBuf[3] = Result/10000%10;
-       LEDBuf[4] = Result/1000%10;
-       LEDBuf[5] = Result/100%10;
-       LEDBuf[6] = Result/10%10;
+       LEDBuf[0] = 23;
+       LEDBuf[1] = 23;
+       LEDBuf[2] = 23;
+       
+       if(Result >= 10000)    
+            LEDBuf[3] = Result/10000%10;
+       else   LEDBuf[3] = 23;
+       
+       if(Result >= 1000) 
+            LEDBuf[4] = Result/1000%10;
+       else   LEDBuf[4] = 23;
+
+       if(Result >= 100) 
+            LEDBuf[5] = Result/100%10;
+       else   LEDBuf[5] = 23;
+
+       if(Result >= 10) 
+            LEDBuf[6] = Result/10%10;
+       else   LEDBuf[6] = 23;
        LEDBuf[7] = Result%10;
 
 }       

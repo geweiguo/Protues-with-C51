@@ -1,0 +1,113 @@
+C51 COMPILER V9.01   MAIN                                                                  11/25/2022 20:21:51 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          /******************************************************************
+   2          功能：      开关实现门铃 700Hz  500Hz
+   3          实现方案：定时器0：产生 两个频率信号 及 一个 500ms延时功能
+   4          编写人：Greg Ge
+   5          修订日期：2022-11-25
+   6          修订版本：V01
+   7          *******************************************************************/
+   8          #include <reg51.h>
+   9          #include "Key.h"
+  10          
+  11          unsigned int timerCnt = 0;
+  12          unsigned char Flag = 0;
+  13          unsigned char un700Hz = 0;
+  14          unsigned char un500Hz = 0;
+  15          
+  16          
+  17          sbit DoorBell = P3^7;
+  18          
+  19          void Key_Service()
+  20          {
+  21   1          Key_Scan();
+  22   1          switch(KeyNum)
+  23   1          {   
+  24   2              case 1 :break;
+  25   2              case 2 :break;
+  26   2              case 3 :TR0 = ~TR0;break;
+  27   2              case 4 :break;
+  28   2              default:break;
+  29   2          }
+  30   1      }
+  31          
+  32          void Timer0Init(void)           //250微秒@12.000MHz
+  33          {
+  34   1              TMOD &= 0xF0;           //设置定时器模式
+  35   1              TMOD |= 0x01;           //设置定时器模式
+  36   1              TL0 = 0x06;             //设置定时初值
+  37   1              TH0 = 0xFF;             //设置定时初值
+  38   1              TF0 = 0;                //清除TF0标志
+  39   1          ET0 = 1;
+  40   1          EA  = 1;
+  41   1      //      TR0 = 1;                //定时器0开始计时
+  42   1      }
+  43          
+  44          void Timer0_ISR(void) interrupt 1
+  45          {
+  46   1          timerCnt++;
+  47   1          if(timerCnt >= 2000)    //500ms延时时间
+  48   1          {   
+  49   2             timerCnt = 0;
+  50   2             Flag = ~Flag;
+  51   2          }
+  52   1      
+  53   1          if(!Flag)
+  54   1          {
+C51 COMPILER V9.01   MAIN                                                                  11/25/2022 20:21:51 PAGE 2   
+
+  55   2            un700Hz ++; 
+  56   2            if(un700Hz >= 3)  //250微秒 * 3 = 750微秒
+  57   2            {  
+  58   3               un700Hz = 0;   
+  59   3               DoorBell = ~ DoorBell;
+  60   3            }          
+  61   2          } 
+  62   1         
+  63   1          if(Flag)
+  64   1          {
+  65   2            un500Hz ++; 
+  66   2            if(un500Hz >= 4)
+  67   2            {  
+  68   3               un500Hz = 0;   
+  69   3               DoorBell = ~ DoorBell;
+  70   3             }          
+  71   2          } 
+  72   1      
+  73   1          TL0 = 0x06;         //设置定时初值
+  74   1              TH0 = 0xFF;             //设置定时初值
+  75   1      }
+  76          
+  77          
+  78          
+  79          void main()
+  80          {
+  81   1          Timer0Init();
+  82   1          while(1)
+  83   1          {
+  84   2            Key_Service();
+  85   2          }
+  86   1      
+  87   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    118    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

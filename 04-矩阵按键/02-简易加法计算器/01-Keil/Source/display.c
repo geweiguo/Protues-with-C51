@@ -66,7 +66,7 @@ unsigned char code leddataCC[]={
 
 
                        
-unsigned char LEDBuf[] = {1,9,8,2};   //数据显示缓冲区
+unsigned char LEDBuf[] = {0,0,0,0,0,0,0,0};   //数据显示缓冲区
 unsigned char code PLACE_CODE[] = {0xfe,0xfd,0xfb,0xf7,0xef,0xdf,0xbf,0x7f}; //共阴，位选信号
 //unsigned char code PLACE_CODE[] = {0x10,0x20,0x40,0x80}; //共阳，位选信号
 

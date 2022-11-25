@@ -1,0 +1,501 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\00-Github Protues\Protues-with-C51\05-中断\02-定时计数器 中断方式 实现 数码管倒计时 流水灯\01-Keil\Project\INT.uvproj
+Project File Date:  11/24/2022
+
+<h2>Output:</h2>
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+..\SOURCE\DISPLAY.H(5): warning C318: can't open file 'delay.h'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=17.0 xdata=0 code=223
+"INT" - 0 Error(s), 4 Warning(s).
+compiling display.c...
+..\SOURCE\DISPLAY.H(5): warning C318: can't open file 'delay.h'
+..\Source\display.c - 0 Error(s), 1 Warning(s).
+Build target '目标 1'
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=17.0 xdata=0 code=223
+"INT" - 0 Error(s), 3 Warning(s).
+compiling display.c...
+..\Source\display.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=17.0 xdata=0 code=223
+"INT" - 0 Error(s), 3 Warning(s).
+Build target '目标 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=17.0 xdata=0 code=223
+"INT" - 0 Error(s), 3 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(32): warning C206: 'Display': missing function-prototype
+compiling display.c...
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+目标未创建
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+目标未创建
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+E:\PROGRAM FILES (X86)\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+目标未创建
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling display.c...
+linking...
+Program Size: data=18.0 xdata=0 code=487
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=18.0 xdata=0 code=487
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=18.0 xdata=0 code=487
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(54): error C237: 'Timer0Init_ISR': function already has a body
+compiling display.c...
+目标未创建
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(54): error C237: 'Timer0Init_ISR': function already has a body
+compiling display.c...
+目标未创建
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=574
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=574
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=20.0 xdata=0 code=571
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=20.0 xdata=0 code=571
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=20.0 xdata=0 code=574
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(52): warning C206: '_crol': missing function-prototype
+..\SOURCE\MAIN.C(52): error C267: '_crol': requires ANSI-style prototype
+compiling display.c...
+目标未创建
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=572
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=607
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=605
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=599
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=599
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=599
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=599
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=599
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=596
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\SOURCE\MAIN.C(7): error C141: syntax error near ';'
+compiling display.c...
+目标未创建
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=593
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling display.c...
+linking...
+Program Size: data=21.0 xdata=0 code=593
+creating hex file from "..\Output\INT"...
+"..\Output\INT" - 0 Error(s), 0 Warning(s).

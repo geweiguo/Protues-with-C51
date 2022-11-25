@@ -230,10 +230,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>32</ColumnNumber>
+      <ColumnNumber>41</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>127</TopLine>
-      <CurrentLine>127</CurrentLine>
+      <TopLine>49</TopLine>
+      <CurrentLine>69</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\display.c</PathWithFileName>
       <FilenameWithoutPath>display.c</FilenameWithoutPath>
@@ -244,19 +244,19 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>51</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>28</TopLine>
-      <CurrentLine>51</CurrentLine>
+      <TopLine>20</TopLine>
+      <CurrentLine>20</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -269,9 +269,9 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DISPLAY.H</PathWithFilename>
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DELAY.H</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>9</CurrentLine>
+    <CurrentLine>1</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -321,9 +321,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DELAY.H</PathWithFilename>
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\04-矩阵按键\02-简易加法计算器\01-Keil\SOURCE\DISPLAY.H</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <CurrentLine>9</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1691,15 +1691,15 @@
       <Documents>
         <Doc>
           <Name>..\Source\main.c</Name>
-          <ColumnNumber>53</ColumnNumber>
-          <TopLine>28</TopLine>
-          <CurrentLine>51</CurrentLine>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>20</TopLine>
+          <CurrentLine>20</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\Source\display.c</Name>
-          <ColumnNumber>32</ColumnNumber>
-          <TopLine>127</TopLine>
-          <CurrentLine>127</CurrentLine>
+          <ColumnNumber>41</ColumnNumber>
+          <TopLine>49</TopLine>
+          <CurrentLine>69</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\DISPLAY.H</Name>

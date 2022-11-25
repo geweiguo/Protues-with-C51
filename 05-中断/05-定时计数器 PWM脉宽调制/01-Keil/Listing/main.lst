@@ -1,0 +1,145 @@
+C51 COMPILER V9.01   MAIN                                                                  11/25/2022 22:34:40 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          /******************************************************************
+   2          功能：1、PWM 脉宽调制实现LED灯亮度调节，并通过数码管显示PWM占空比。
+   3                2、开关实现 灯的开关 及 占空比的切换；
+   4          
+   5          实现方案：定时器0：数码管动态刷新显示
+   6                    定时器1：产生PWM波 
+   7                    外部中断0：开关切换 
+   8          
+   9          PWM波主要两个参数：1、占空比  2、基础频率（采用100 Hz）
+  10          编写人：Greg Ge
+  11          修订日期：2022-11-25
+  12          修订版本：V01
+  13          *******************************************************************/
+  14          #include <reg51.h>
+  15          #include "display.h"
+  16          
+  17          unsigned char PWM_Duty = 0;
+  18          unsigned char PWM_Cnt = 0;
+  19          sbit LED = P1^0;
+  20          
+  21          void Timer0Init(void)           //1毫秒@12.000MHz
+  22          {
+  23   1              TMOD &= 0xF0;           //设置定时器模式
+  24   1              TMOD |= 0x01;           //设置定时器模式
+  25   1              TL0 = 0x18;             //设置定时初值
+  26   1              TH0 = 0xFC;             //设置定时初值
+  27   1              TF0 = 0;                //清除TF0标志
+  28   1          ET0 = 1;
+  29   1              TR0 = 1;                //定时器0开始计时
+  30   1      }
+  31          
+  32          void Timer0Init_ISR(void) interrupt 1
+  33          {
+  34   1          TR0 = 0; 
+  35   1          Display();
+  36   1          TL0 = 0x18;         //设置定时初值
+  37   1          TH0 = 0xFC;         //设置定时初值
+  38   1          TR0 = 1; 
+  39   1      }
+  40          
+  41          void Timer1Init(void)           //100微秒@12.000MHz
+  42          {
+  43   1              TMOD &= 0x0F;           //设置定时器模式
+  44   1              TMOD |= 0x10;           //设置定时器模式
+  45   1              TL1 = 0x9C;             //设置定时初值
+  46   1              TH1 = 0xFF;             //设置定时初值
+  47   1              TF1 = 0;                //清除TF1标志
+  48   1          ET1 = 1;
+  49   1              TR1 = 1;                //定时器1开始计时
+  50   1      }
+  51          
+  52          void Timer1_ISR(void) interrupt 3
+  53          {
+  54   1          TR1 = 0;
+C51 COMPILER V9.01   MAIN                                                                  11/25/2022 22:34:40 PAGE 2   
+
+  55   1          PWM_Cnt ++;
+  56   1          if(PWM_Cnt > 100)
+  57   1          {   
+  58   2              PWM_Cnt = 0;
+  59   2              
+  60   2          }
+  61   1          if(PWM_Cnt < PWM_Duty)
+  62   1          {
+  63   2             LED = 1;     
+  64   2          }
+  65   1          if(PWM_Cnt > PWM_Duty)
+  66   1          {
+  67   2             LED = 0;     
+  68   2          }
+  69   1              TL1 = 0x9C;             //设置定时初值
+  70   1              TH1 = 0xFF;             //设置定时初值
+  71   1          TR1 = 1;
+  72   1      }
+  73          
+  74          void  EX0_Int0()
+  75          {
+  76   1          IT0 = 1;
+  77   1          EX0 = 1;
+  78   1      }
+  79          
+  80          void  EX0_ISR() interrupt 0
+  81          {
+  82   1          static unsigned char KeyCnt = 0;
+  83   1          KeyCnt ++;
+  84   1          switch(KeyCnt)
+  85   1          {
+  86   2            case 1 : PWM_Duty = 25;break; 
+  87   2            case 2 : PWM_Duty = 50;break; 
+  88   2            case 3 : PWM_Duty = 75;break; 
+  89   2            case 4 : PWM_Duty = 80;break; 
+  90   2            case 5 : PWM_Duty = 100;break; 
+  91   2            case 6 : PWM_Duty = 0;KeyCnt = 0;break; 
+  92   2          
+  93   2          }
+  94   1      
+  95   1      }
+  96          
+  97          void main()
+  98          {
+  99   1      
+ 100   1          Timer0Init();
+ 101   1          Timer1Init(); 
+ 102   1          EX0_Int0();
+ 103   1          EA = 1;
+ 104   1      
+ 105   1          while(1)
+ 106   1          {
+ 107   2              LEDBuf[0] = 23;
+ 108   2              LEDBuf[1] = 23;
+ 109   2              LEDBuf[2] = 23;
+ 110   2              LEDBuf[3] = 23;
+ 111   2              LEDBuf[4] = 23;
+ 112   2              LEDBuf[5] =  PWM_Duty/100;
+ 113   2              LEDBuf[6] =  PWM_Duty/10%10;
+ 114   2              LEDBuf[7] =  PWM_Duty%10;
+ 115   2          }
+ 116   1      
+C51 COMPILER V9.01   MAIN                                                                  11/25/2022 22:34:40 PAGE 3   
+
+ 117   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    283    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
