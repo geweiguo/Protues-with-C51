@@ -1,0 +1,4 @@
+"..\Output\display.obj",
+"..\Output\main.obj" 
+TO "..\Output\clock" 
+PRINT("..\Listing\clock.m51") DISABLEWARNING (16) 

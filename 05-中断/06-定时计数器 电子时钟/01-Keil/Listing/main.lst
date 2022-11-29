@@ -1,0 +1,206 @@
+C51 COMPILER V9.01   MAIN                                                                  11/27/2022 21:01:28 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          /*********************************************************
+   2          程序功能：电子时钟，实现分 秒 时调整
+   3          程序实现：T0 用于数码管刷新
+   4                    T1 产生时间 基准时间秒 > 分 > 时
+   5                    INT0 用于KEY1 调整页面切换
+   6                    INT1 用于KEY2 调整参数
+   7          编写人 ：Greg Ge
+   8          修订日期：2022-11-27
+   9          修订版本：V01
+  10          *********************************************************/
+  11          #include <reg51.h>
+  12          #include "display.h"
+  13          
+  14          unsigned char timer = 0;
+  15          unsigned char sec = 0;
+  16          unsigned char min = 0;
+  17          unsigned char hour = 0;
+  18          unsigned char state = 0;
+  19          
+  20          //配置T0 用于数码管刷新  1毫秒
+  21          void Timer0Init(void)           //1毫秒@12.000MHz
+  22          {
+  23   1      //      AUXR &= 0x7F;           //定时器时钟12T模式
+  24   1              TMOD &= 0xF0;           //设置定时器模式
+  25   1              TMOD |= 0x01;           //设置定时器模式
+  26   1              TL0 = 0x18;             //设置定时初值
+  27   1              TH0 = 0xFC;             //设置定时初值
+  28   1              TF0 = 0;                //清除TF0标志
+  29   1          ET0 = 1;
+  30   1              TR0 = 1;                //定时器0开始计时
+  31   1      }
+  32          
+  33          //T0服务函数
+  34          void Timer0_ISR(void) interrupt 1
+  35          {
+  36   1         TR0 = 0; 
+  37   1         Display();
+  38   1         TL0 = 0x18;          //设置定时初值
+  39   1         TH0 = 0xFC;          //设置定时初值
+  40   1         TR0 = 1; 
+  41   1      
+  42   1      }
+  43          
+  44          //配置T1 产生时间 基准时间秒 > 分 > 时
+  45          void Timer1Init(void)           //50毫秒@12.000MHz
+  46          {
+  47   1      //      AUXR &= 0xBF;           //定时器时钟12T模式
+  48   1              TMOD &= 0x0F;           //设置定时器模式
+  49   1              TMOD |= 0x10;           //设置定时器模式
+  50   1              TL1 = 0xB0;             //设置定时初值
+  51   1              TH1 = 0x3C;             //设置定时初值
+  52   1              TF1 = 0;                //清除TF1标志
+  53   1          ET1 = 1;
+  54   1      }
+C51 COMPILER V9.01   MAIN                                                                  11/27/2022 21:01:28 PAGE 2   
+
+  55          //T1服务函数
+  56          void Timer1_ISR(void) interrupt 3
+  57          {
+  58   1         timer ++;
+  59   1         if(timer >= 20)
+  60   1         {
+  61   2             timer = 0;
+  62   2             sec ++;
+  63   2             if(sec >=60)
+  64   2             {
+  65   3               sec = 0;
+  66   3               min++;
+  67   3               if(min >=60)
+  68   3               {
+  69   4                  min = 0;
+  70   4                  hour ++;
+  71   4                  if(hour >= 24)
+  72   4                  {
+  73   5                     hour = 0; 
+  74   5                  }         
+  75   4               }  
+  76   3             }    
+  77   2         }
+  78   1      
+  79   1         TL1 = 0xB0;          //设置定时初值
+  80   1         TH1 = 0x3C;          //设置定时初值   
+  81   1      }
+  82          
+  83          void INT0init()
+  84          {
+  85   1          IT0 = 1;//下降沿触发
+  86   1          EX0 = 1;
+  87   1      }
+  88          void INT0_ISR() interrupt 0   //KEY1 进行页面切换
+  89          {
+  90   1          state ++;
+  91   1          if(state >4)
+  92   1             state = 0; 
+  93   1      }
+  94          void INT1init()
+  95          {
+  96   1          IT1 = 1;//下降沿触发
+  97   1          EX1 = 1;
+  98   1      }
+  99          void INT1_ISR() interrupt 2   //KEY1 进行页面切换
+ 100          {
+ 101   1          switch(state)
+ 102   1          {
+ 103   2              case 0:break;
+ 104   2              case 1:sec++;if(sec>=60) sec = 0;break;
+ 105   2              case 2:min++;if(min>=60) min = 0;break;
+ 106   2              case 3:hour++;if(hour>=60) hour = 0;break;
+ 107   2          } 
+ 108   1      }
+ 109          
+ 110          void shownomal()
+ 111          {
+ 112   1          LEDBuf[0] = 23;
+ 113   1          LEDBuf[1] = 23;
+ 114   1          LEDBuf[2] = hour/10;
+ 115   1          LEDBuf[3] = hour%10;
+ 116   1          LEDBuf[4] = min/10;
+C51 COMPILER V9.01   MAIN                                                                  11/27/2022 21:01:28 PAGE 3   
+
+ 117   1          LEDBuf[5] = min%10;
+ 118   1          LEDBuf[6] = sec/10;
+ 119   1          LEDBuf[7] = sec%10;
+ 120   1      }
+ 121          
+ 122          void showsec()
+ 123          {
+ 124   1          LEDBuf[0] = 23;
+ 125   1          LEDBuf[1] = 23;
+ 126   1          LEDBuf[2] = 23;
+ 127   1          LEDBuf[3] = 23;
+ 128   1          LEDBuf[4] = 23;
+ 129   1          LEDBuf[5] = 23;
+ 130   1          LEDBuf[6] = sec/10;
+ 131   1          LEDBuf[7] = sec%10;
+ 132   1      }
+ 133          
+ 134          void showmin()
+ 135          {
+ 136   1          LEDBuf[0] = 23;
+ 137   1          LEDBuf[1] = 23;
+ 138   1          LEDBuf[2] = 23;
+ 139   1          LEDBuf[3] = 23;
+ 140   1          LEDBuf[4] = min/10;
+ 141   1          LEDBuf[5] = min%10;
+ 142   1          LEDBuf[6] = 23;
+ 143   1          LEDBuf[7] = 23;
+ 144   1      }
+ 145          
+ 146          void showhour()
+ 147          {
+ 148   1          LEDBuf[0] = 23;
+ 149   1          LEDBuf[1] = 23;
+ 150   1          LEDBuf[2] = hour/10;
+ 151   1          LEDBuf[3] = hour%10;
+ 152   1          LEDBuf[4] = 23;
+ 153   1          LEDBuf[5] = 23;
+ 154   1          LEDBuf[6] = 23;
+ 155   1          LEDBuf[7] = 23;
+ 156   1      }
+ 157          void main()
+ 158          {       
+ 159   1          EA = 1;
+ 160   1          Timer0Init();
+ 161   1          Timer1Init();
+ 162   1          INT0init();
+ 163   1          INT1init();
+ 164   1      
+ 165   1          while(1)
+ 166   1          {
+ 167   2            switch(state)
+ 168   2            {
+ 169   3              case 0:TR1 = 1;shownomal();break;
+ 170   3              case 1:TR1 = 0;showsec();break; //调秒
+ 171   3              case 2:TR1 = 0;showmin();break; //调分
+ 172   3              case 3:TR1 = 0;showhour();break; //调时
+ 173   3            
+ 174   3            }        
+ 175   2          }
+ 176   1      }
+
+
+C51 COMPILER V9.01   MAIN                                                                  11/27/2022 21:01:28 PAGE 4   
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    481    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
