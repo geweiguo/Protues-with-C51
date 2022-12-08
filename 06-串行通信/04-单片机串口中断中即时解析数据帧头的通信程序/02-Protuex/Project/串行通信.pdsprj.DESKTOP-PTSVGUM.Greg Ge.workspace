@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
-  <PLACEMENT>2c0000000000000001000000ffffffffffffffffffffffffffffffff15000000440000005e0500007d030000</PLACEMENT>
-  <WINDOW type="default" module="ISIS"/>
+ <FRAME activewindow="1">
+  <PLACEMENT>2c00000000000000010000000083ffff0083ffffffffffffffffffff2300000012000000650400006d030000</PLACEMENT>
   <WINDOW type="default" module="ARES"/>
+  <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
@@ -55,11 +55,14 @@
      <ITEM name="TopLineAddress">00000080</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="364" flags="00008023" y="790" h="250" pid="0" iid="16">
+   <POPUP w="450" x="1240" flags="00008023" y="104" h="250" pid="0" iid="16">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
+   </POPUP>
+   <POPUP w="695" x="73" flags="00000000" y="587" h="453" pid="0" iid="17">
+    <PROPERTIES/>
    </POPUP>
   </PWI>
  </MODULE>

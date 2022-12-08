@@ -1,0 +1,5 @@
+"..\Output\delay.obj",
+"..\Output\main.obj",
+"..\Output\uart.obj" 
+TO "..\Output\uart_passtime -1" 
+PRINT("..\Listing\uart_passtime -1.m51")

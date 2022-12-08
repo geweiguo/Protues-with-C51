@@ -1,0 +1,6 @@
+"..\Output\delay.obj",
+"..\Output\main.obj",
+"..\Output\uart.obj" 
+TO "..\Output\uart_passtime" 
+PRINT("..\Listing\uart_passtime.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

@@ -1,0 +1,187 @@
+C51 COMPILER V9.01   UART                                                                  12/05/2022 22:30:18 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN ..\Output\uart.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\uart.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\uart.lst) OBJECT(..\Output\uart.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include <stdio.h>
+   3          #include "uart.h"
+   4          
+   5          unsigned char RecBuf[MAXREC] = 0;
+   6          unsigned char RecCnt = 0;
+   7          unsigned char Recflag = 0;
+   8          unsigned char machine_Step = 0;
+   9          unsigned int temp_data;
+  10          unsigned int led_Cnt;
+  11          unsigned int beep_Cnt;
+  12          unsigned char flageLED = 0;
+  13          unsigned char flageBEEP = 0;
+  14          
+  15          void UartInit(void)             //9600bps@11.0592MHz
+  16          {
+  17   1              PCON &= 0x7F;           //²¨ÌØÂÊ²»±¶ËÙ
+  18   1              SCON = 0x50;            //8Î»Êý¾Ý,¿É±ä²¨ÌØÂÊ
+  19   1      //      AUXR &= 0xBF;           //¶¨Ê±Æ÷1Ê±ÖÓÎªFosc/12,¼´12T
+  20   1      //      AUXR &= 0xFE;           //´®¿Ú1Ñ¡Ôñ¶¨Ê±Æ÷1Îª²¨ÌØÂÊ·¢ÉúÆ÷
+  21   1              TMOD &= 0x0F;           //Çå³ý¶¨Ê±Æ÷1Ä£Ê½Î»
+  22   1              TMOD |= 0x20;           //Éè¶¨¶¨Ê±Æ÷1Îª8Î»×Ô¶¯ÖØ×°·½Ê½
+  23   1              TL1 = 0xFD;             //Éè¶¨¶¨Ê±³õÖµ
+  24   1              TH1 = 0xFD;             //Éè¶¨¶¨Ê±Æ÷ÖØ×°Öµ
+  25   1              ET1 = 0;                //½ûÖ¹¶¨Ê±Æ÷1ÖÐ¶Ï
+  26   1          ES  = 1;        //´®¿ÚÖÐ¶Ï´ò¿ª
+  27   1              TR1 = 1;                //Æô¶¯¶¨Ê±Æ÷1
+  28   1      
+  29   1      }
+  30          
+  31          void SentByte(unsigned char dat)   //·¢ËÍÒ»¸ö×Ö½Ú
+  32          {
+  33   1          SBUF = dat;
+  34   1          while(!TI);
+  35   1          TI = 0;
+  36   1      }
+  37          
+  38          void SendString(unsigned char *dat) //·¢ËÍÒ»´®×Ö·û Hello World!
+  39          {
+  40   1          while(*dat != '\0')
+  41   1          {
+  42   2             SentByte(*dat++); 
+  43   2          }
+  44   1      
+  45   1      }
+  46          
+  47          char putchar(char c)   //printf º¯ÊýÖØ¶¨Ïò
+  48          {
+  49   1           SentByte(c);
+  50   1           return c;
+  51   1      }
+  52          
+  53          /***************************************************************
+  54          1¡¢ÖÐ¶Ï·þÎñº¯ÊýÒ»¶¨ÊÇÒ»¸öÃ»ÓÐ·µ»ØÖµµÄº¯Êý£»
+C51 COMPILER V9.01   UART                                                                  12/05/2022 22:30:18 PAGE 2   
+
+  55          2¡¢ÖÐ¶Ï·þÎñº¯ÊýÒ»¶¨ÊÇÃ»ÓÐ²ÎÊýµÄº¯Êý£»
+  56          3¡¢ÖÐ¶Ï·þÎñº¯Êýº¯ÊýÃûºó¸ú¹Ø¼ü×Ö interrupt ¡°n¡±  
+  57          4¡¢nÊÇÖÐ¶ÏÏòÁ¿Èë¿ÚµØÖ·Öµ£¬nÈ¡Öµ£º0~4 ¹²5¸öÖÐ¶ÏÔ´ 8*n + 0003H
+  58                                                             0   0003H INT0
+  59                                                             1   000BH T0
+  60                                                             2   0013H INT1
+  61                                                             3   001BH T1
+  62                                                             4   0023H ES
+  63          5¡¢ÖÐ¶Ï·þÎñº¯Êý²»ÄÜ±»Ö÷³ÌÐò»òÆäËü³ÌÐòËùµ÷ÓÃ
+  64          6¡¢nºóÃæ¸úusing m £¨0-3£©¹¤×÷¼Ä´æÆ÷×é
+  65          ***************************************************************/
+  66          
+  67          void Rec_ISR() interrupt 4
+  68          {
+  69   1          
+  70   1          if(RI)
+  71   1          {   
+  72   2              RI = 0;
+  73   2              switch(machine_Step)
+  74   2              {
+  75   3               case 0: RecBuf[0] = SBUF;
+  76   3                      if(RecBuf[0] == 0x55)
+  77   3                      {
+  78   4                        machine_Step = 1; 
+  79   4                        
+  80   4                      } 
+  81   3                      else
+  82   3                      {
+  83   4                        machine_Step = 0;
+  84   4                      }
+  85   3                  break;
+  86   3                case 1:RecBuf[1] = SBUF;
+  87   3                      if(RecBuf[1] == 0xAA)
+  88   3                      {
+  89   4                        machine_Step = 2;
+  90   4                        RecCnt = 2; 
+  91   4                        
+  92   4                      } 
+  93   3                      else
+  94   3                      {
+  95   4                        machine_Step = 0;
+  96   4                      }
+  97   3                   break;
+  98   3                case 2: RecBuf[RecCnt] = SBUF; 
+  99   3                        RecCnt++;
+ 100   3                        if(RecCnt > 4)// ×Ô¶¨ÒåÊý¾ÝÐ­Òé£ºÖ¡Í·£º55 AA Êý¾ÝÀàÐÍ£º01 LED/02 Beep  Êý¾Ý³¤¶È£º20 20 £
+             -»¹²¼Æ5Ö¡Êý¾Ý£¬>4 ËµÃ÷Êý¾Ý½ÓÊÕÍê±Ï£»                    
+ 101   3                         {
+ 102   4                           machine_Step = 3; 
+ 103   4                                                
+ 104   4                         }
+ 105   3                        else
+ 106   3                         {
+ 107   4                           machine_Step = 2;
+ 108   4                           
+ 109   4                         }
+ 110   3      
+ 111   3                        break;
+ 112   3                  case 3: RecBuf[RecCnt] = SBUF;
+ 113   3                          if(RecBuf[RecCnt] == 0x0D)
+ 114   3                          {
+ 115   4                             switch(RecBuf[2])
+C51 COMPILER V9.01   UART                                                                  12/05/2022 22:30:18 PAGE 3   
+
+ 116   4                              {
+ 117   5                                case 1: 
+ 118   5                                        temp_data = RecBuf[3];
+ 119   5                                        temp_data = temp_data << 8;
+ 120   5                                        temp_data = temp_data + RecBuf[4];
+ 121   5                                        led_Cnt = 0; 
+ 122   5                                        
+ 123   5                                  break;
+ 124   5                                case 2: 
+ 125   5                                        temp_data = RecBuf[3];
+ 126   5                                        temp_data = temp_data << 8;
+ 127   5                                        temp_data = temp_data + RecBuf[4];
+ 128   5                                        beep_Cnt = temp_data;
+ 129   5                                                                                                                
+             -          
+ 130   5                                  break;
+ 131   5                                default:break; 
+ 132   5                                                        
+ 133   5                              }
+ 134   4                          }
+ 135   3                       machine_Step = 0;
+ 136   3                       RecCnt = 0;
+ 137   3                       SendString(RecBuf);
+ 138   3                       Cls(RecBuf);                 
+ 139   3                       break;
+ 140   3                                   
+ 141   3              }
+ 142   2          }
+ 143   1          if(TI)
+ 144   1          {
+ 145   2              TI = 0;    
+ 146   2          }
+ 147   1      }
+ 148          
+ 149          void Cls(unsigned char* buf)
+ 150          {
+ 151   1          unsigned char i = 0;
+ 152   1          for(i = 0;i < MAXREC;i++)
+ 153   1          {
+ 154   2              buf[i] = 0;    
+ 155   2          }
+ 156   1      
+ 157   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    367    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     21       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\00-Github Protues\Protues-with-C51\06-串行通信\03-单片机串口中断中即时解析数据帧头的通信程序\01-Keil\Project\uart_realtime.uvproj
+Project File Date:  12/02/2022
+
+<h2>Output:</h2>
+compiling uart.c...
+..\Source\uart.c - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling uart.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?UARTINIT?UART
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTRING?UART
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?UART
+Program Size: data=12.0 xdata=0 code=122
+"uart_realtime" - 0 Error(s), 3 Warning(s).
+Build target '目标 1'
+compiling main.c...
+compiling uart.c...
+linking...
+Program Size: data=12.0 xdata=0 code=122
+creating hex file from "..\Output\uart_realtime"...
+"..\Output\uart_realtime" - 0 Error(s), 0 Warning(s).
+compiling uart.c...
+..\Source\uart.c - 0 Error(s), 0 Warning(s).

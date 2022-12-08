@@ -1,0 +1,6 @@
+"..\Output\delay.obj",
+"..\Output\main.obj",
+"..\Output\uart.obj" 
+TO "..\Output\uart_realtime" 
+PRINT("..\Listing\uart_realtime.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 
