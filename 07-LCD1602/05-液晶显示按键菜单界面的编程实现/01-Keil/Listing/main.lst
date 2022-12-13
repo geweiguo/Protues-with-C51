@@ -1,0 +1,172 @@
+C51 COMPILER V9.01   MAIN                                                                  12/10/2022 01:17:26 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          /****************************************
+   2          程序功能：四位IO口
+   3          *****************************************/
+   4          #include <reg51.h>
+   5          #include <stdio.h>
+   6          #include "delay.h"
+   7          #include "LCD1602.h"
+   8          #include "Key.h"
+   9          
+  10          void StartMenu();
+  11          void SubmeunOne();
+  12          void SubmeunTwo();
+  13          void SubmeunThree();
+  14          void SubmeunFour();
+  15          void SubmeunAlam();
+  16          void KeyService();
+  17          void LCDShowService();
+  18          
+  19          int TEMPbuf[] = {125,126,127,128,223,224,225,226,334,335,336,337,421,423,424,425};
+  20          void ShowTempData(unsigned char x,unsigned char y,int *buf,unsigned char num);
+  21          unsigned char menu;
+  22          
+  23          void main()
+  24          {
+  25   1          LCDInit();
+  26   1          DelayXms(10);
+  27   1          StartMenu();
+  28   1          DelayXms(2000);
+  29   1          LCDWriteCmd(LCD_SCREEN_CLR);
+  30   1          while(1)
+  31   1          {  
+  32   2             KeyService();
+  33   2             LCDShowService();
+  34   2          }
+  35   1      }
+  36          void LCDShowService()
+  37          {
+  38   1          switch(menu)
+  39   1          {
+  40   2              case 0: SubmeunOne();break;
+  41   2              case 1: SubmeunTwo();break;
+  42   2              case 2: SubmeunThree();break;
+  43   2              case 3: SubmeunFour();break;
+  44   2              case 4: SubmeunAlam();break;
+  45   2              default:break;
+  46   2          }
+  47   1      
+  48   1      
+  49   1      }
+  50          void KeyService()
+  51          {
+  52   1         Key_Scan();
+  53   1         switch(KeyNum)
+  54   1          {
+C51 COMPILER V9.01   MAIN                                                                  12/10/2022 01:17:26 PAGE 2   
+
+  55   2            case 1:menu++; if(menu == 4) menu = 0;break;
+  56   2            case 2:menu--; if(menu > 4) menu = 3;break;
+  57   2            case 3:menu = 0; break;  
+  58   2            case 4:menu = 4; LCDWriteCmd(LCD_SCREEN_CLR);break;     
+  59   2            default:break;
+  60   2          }
+  61   1      
+  62   1      }
+  63          
+  64          void StartMenu()
+  65          {
+  66   1          LEDShowStr(1,0,"The DAS of TEMP");
+  67   1          LEDShowStr(6,1,"v1.0");
+  68   1      }
+  69          
+  70          void SubmeunOne()
+  71          {    
+  72   1          LEDShowStr(0,0,"CH0:");
+  73   1          ShowTempData(4,0,TEMPbuf,0);
+  74   1      
+  75   1          LEDShowStr(8,0,"CH1:");
+  76   1          ShowTempData(12,0,TEMPbuf,1);
+  77   1      
+  78   1          LEDShowStr(0,1,"CH2:");
+  79   1          ShowTempData(4,1,TEMPbuf,2);
+  80   1      
+  81   1          LEDShowStr(8,1,"CH3:");
+  82   1          ShowTempData(12,1,TEMPbuf,3);
+  83   1      }
+  84          
+  85          void ShowTempData(unsigned char x,unsigned char y,int *buf,unsigned char num)
+  86          {
+  87   1          LCDSetPosition(x,y);
+  88   1          LCDWritedata(*(buf+num)/100 + '0');
+  89   1          LCDWritedata(*(buf+num)/10%10 + '0');
+  90   1          LCDWritedata('.' );
+  91   1          LCDWritedata(*(buf+num)%10 + '0');
+  92   1      }
+  93          
+  94          void SubmeunTwo()
+  95          {    
+  96   1          LEDShowStr(0,0,"CH4:");
+  97   1          ShowTempData(4,0,TEMPbuf,4);
+  98   1      
+  99   1          LEDShowStr(8,0,"CH5:");
+ 100   1          ShowTempData(12,0,TEMPbuf,5);
+ 101   1      
+ 102   1          LEDShowStr(0,1,"CH6:");
+ 103   1          ShowTempData(4,1,TEMPbuf,6);
+ 104   1      
+ 105   1          LEDShowStr(8,1,"CH7:");
+ 106   1          ShowTempData(12,1,TEMPbuf,7);
+ 107   1      }
+ 108          
+ 109          void SubmeunThree()
+ 110          {    
+ 111   1          LEDShowStr(0,0,"CH8:");
+ 112   1          ShowTempData(4,0,TEMPbuf,8);
+ 113   1      
+ 114   1          LEDShowStr(8,0,"CH9:");
+ 115   1          ShowTempData(12,0,TEMPbuf,9);
+ 116   1      
+C51 COMPILER V9.01   MAIN                                                                  12/10/2022 01:17:26 PAGE 3   
+
+ 117   1          LEDShowStr(0,1,"CHA:");
+ 118   1          ShowTempData(4,1,TEMPbuf,10);
+ 119   1      
+ 120   1          LEDShowStr(8,1,"CHB:");
+ 121   1          ShowTempData(12,1,TEMPbuf,11);
+ 122   1      }
+ 123          
+ 124          void SubmeunFour()
+ 125          {    
+ 126   1          LEDShowStr(0,0,"CHC:");
+ 127   1          ShowTempData(4,0,TEMPbuf,12);
+ 128   1      
+ 129   1          LEDShowStr(8,0,"CHD:");
+ 130   1          ShowTempData(12,0,TEMPbuf,13);
+ 131   1      
+ 132   1          LEDShowStr(0,1,"CHE:");
+ 133   1          ShowTempData(4,1,TEMPbuf,14);
+ 134   1      
+ 135   1          LEDShowStr(8,1,"CHF:");
+ 136   1          ShowTempData(12,1,TEMPbuf,15);
+ 137   1      }
+ 138          
+ 139          void SubmeunAlam()
+ 140          {   
+ 141   1      
+ 142   1          LEDShowStr(3,0,"ALARM MENU");
+ 143   1      
+ 144   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    739    ----
+   CONSTANT SIZE    =    112    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     33       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

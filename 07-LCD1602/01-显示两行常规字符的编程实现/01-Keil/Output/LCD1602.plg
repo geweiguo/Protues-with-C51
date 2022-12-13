@@ -1,0 +1,17 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\00-Github Protues\Protues-with-C51\07-LCD1602\01-显示两行常规字符的编程实现\01-Keil\Project\LCD1602.uvproj
+Project File Date:  12/08/2022
+
+<h2>Output:</h2>
+Build target '目标 1'
+compiling delay.c...
+compiling LCD1602.c...
+compiling main.c...
+linking...
+Program Size: data=94.0 xdata=0 code=1440
+creating hex file from "..\Output\LCD1602"...
+"..\Output\LCD1602" - 0 Error(s), 0 Warning(s).

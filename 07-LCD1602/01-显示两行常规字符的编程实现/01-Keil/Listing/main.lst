@@ -1,0 +1,60 @@
+C51 COMPILER V9.01   MAIN                                                                  12/09/2022 22:01:14 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include <string.h>
+   3          #include "delay.h"
+   4          #include "LCD1602.h"
+   5          
+   6          
+   7          void main()
+   8          {
+   9   1          unsigned char str[] = "Hello LCD 1602";
+  10   1          unsigned char str1[] = "Greg Ge 666";
+  11   1          unsigned char i;
+  12   1          LCDInit();
+  13   1          DelayXms(10);
+  14   1      
+  15   1             //确定DDRAM地址
+  16   1              LCDWriteCmd(0x80);    // 命令：设置数据存储器（DDRAM）地址； 第一行
+  17   1              for(i = 0;i < strlen(str);i++)   // DDRAM地址从0开始到str长度结束；
+  18   1              {
+  19   2                  LCDWritedata(str[i]);
+  20   2                  
+  21   2              }
+  22   1              
+  23   1              LCDWriteCmd(0xC0);   // 命令：设置数据存储器（DDRAM）地址； 第二行  C是由 8 + 4 = C 得来；
+  24   1              for(i= 0 ;i < strlen(str1);i++)   // DDRAM地址从40开始到str长度结束；
+  25   1              {
+  26   2                  LCDWritedata(str1[i]);
+  27   2                
+  28   2              }
+  29   1      
+  30   1          while(1)
+  31   1          {
+  32   2                 LCDWriteCmd(LCD_CUR_MOVE_LEFT); //光标左移
+  33   2                 DelayXms(800);
+  34   2          }
+  35   1      
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    150    ----
+   CONSTANT SIZE    =     27    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      28
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
