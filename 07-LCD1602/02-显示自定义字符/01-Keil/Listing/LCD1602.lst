@@ -1,0 +1,129 @@
+C51 COMPILER V9.01   LCD1602                                                               12/09/2022 14:49:22 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD1602
+OBJECT MODULE PLACED IN ..\Output\LCD1602.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\LCD1602.c BROWSE DEBUG OBJECTEXTEND PRINT(..\
+                    -Listing\LCD1602.lst) OBJECT(..\Output\LCD1602.obj)
+
+line level    source
+
+   1          #include "LCD1602.h"
+   2          
+   3          //unsigned char code str[] = {0x00,0x00,0x00,0x00,0x1f,0x00,0x00,0x00};
+   4          void LCDReadBF()
+   5          {
+   6   1          unsigned char state;
+   7   1          unsigned char i = 0;
+   8   1          LCD1602_DB = 0xFF;//IO口置1 做输入
+   9   1          LCD1602_RS = 0;
+  10   1          LCD1602_RW = 1;
+  11   1          do
+  12   1          {
+  13   2              LCD1602_EN = 1;
+  14   2              state =  LCD1602_DB;
+  15   2              LCD1602_EN = 0;
+  16   2              i++;
+  17   2              if(i>50)
+  18   2                  break;
+  19   2          }
+  20   1          while(state & 0x80);
+  21   1          DelayXms(1);
+  22   1      }
+  23          
+  24          void LCDWriteCmd(unsigned char cmd)
+  25          {   
+  26   1          LCDReadBF(); //等待忙检测
+  27   1          LCD1602_RS = 0;
+  28   1          LCD1602_RW = 0;
+  29   1          LCD1602_DB = cmd; 
+  30   1          LCD1602_EN = 1;
+  31   1          LCD1602_EN = 0;
+  32   1      }
+  33          void LCDWritedata(unsigned char dat)
+  34          {   
+  35   1          LCDReadBF(); //等待忙检测
+  36   1          LCD1602_RS = 1;
+  37   1          LCD1602_RW = 0;
+  38   1          LCD1602_DB = dat; 
+  39   1          LCD1602_EN = 1;
+  40   1          LCD1602_EN = 0;
+  41   1      }
+  42          
+  43          void LCDInit()
+  44          {
+  45   1          LCDWriteCmd(LCD_MODE_PIN8);      //显示莫斯设置 两行 5*8点阵
+  46   1          LCDWriteCmd(LCD_DIS_ON);        //显示开 光标关
+  47   1          LCDWriteCmd( LCD_CURSOR_RIGHT ); //  光标右移，显示不移动
+  48   1          LCDWriteCmd( LCD_SCREEN_CLR  );  // 清屏
+  49   1      }
+  50          
+  51          void  LCDSetPosition(unsigned char x,unsigned char y)
+  52          {
+  53   1          if(0 == y)
+  54   1          {
+C51 COMPILER V9.01   LCD1602                                                               12/09/2022 14:49:22 PAGE 2   
+
+  55   2              LCDWriteCmd(0x80 | x);
+  56   2          }
+  57   1          else
+  58   1          {
+  59   2              LCDWriteCmd(0x80 | (0x40 + x));
+  60   2          }
+  61   1      }
+  62          
+  63          void LEDShowStr(unsigned char x,unsigned char y,unsigned char *Str)
+  64          {
+  65   1           LCDSetPosition(x,y);
+  66   1          while(*Str != '\0')
+  67   1          {
+  68   2              LCDWritedata(*Str++);
+  69   2              
+  70   2          }
+  71   1         
+  72   1          
+  73   1      }
+  74          //第一种
+  75          void LCDWriteCGRAM()
+  76          {
+  77   1          unsigned char i;
+  78   1          LCDWriteCmd(0x40); //1、构造自定义字符，CGRAM起始地址
+  79   1          for(i = 0;i< 8;i++)
+  80   1          {
+  81   2             LCDWritedata(str[i]); 
+  82   2          
+  83   2          }
+  84   1          //2.显示字符
+  85   1          LCDWriteCmd(0x80 | 0x05);
+  86   1          LCDWritedata(0x00); 
+  87   1      }
+  88          
+  89          //第二种
+  90          void LCDSetChar(unsigned x,unsigned char y,unsigned char pos,unsigned char *str)
+  91          {
+  92   1          unsigned char i;
+  93   1          //先构造自定义字符 确定位置CGRAM
+  94   1          for(i = 0; i<8;i++)
+  95   1          {
+  96   2              LCDWriteCmd(0x40 + pos*8 +i); 
+  97   2              LCDWritedata(*(str+i));    
+  98   2          }
+  99   1          //第二步 显示
+ 100   1          LCDSetPosition(x,y);
+ 101   1          LCDWritedata(0x00 + pos); 
+ 102   1      
+ 103   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    249    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      15
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

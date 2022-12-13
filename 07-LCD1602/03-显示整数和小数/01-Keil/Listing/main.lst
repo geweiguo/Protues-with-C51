@@ -1,0 +1,60 @@
+C51 COMPILER V9.01   MAIN                                                                  12/09/2022 19:40:48 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\Output\main.obj
+COMPILER INVOKED BY: E:\Program Files (x86)\Keil\C51\BIN\C51.EXE ..\Source\main.c BROWSE DEBUG OBJECTEXTEND PRINT(..\Lis
+                    -ting\main.lst) OBJECT(..\Output\main.obj)
+
+line level    source
+
+   1          /****************************************
+   2          程序功能：显示整数和小数
+   3          *****************************************/
+   4          #include <reg51.h>
+   5          #include <stdio.h>
+   6          #include "delay.h"
+   7          #include "LCD1602.h"
+   8          
+   9          
+  10          
+  11          void main()
+  12          {
+  13   1          long dat = -12345;
+  14   1          unsigned char str[11];  //整数 缓冲区
+  15   1          unsigned char floatbuf[10]; //浮点数缓冲区 
+  16   1          unsigned char floatbuf2[10]; //浮点数缓冲区 
+  17   1          float num = 3.14159;
+  18   1          float num2 = 12.5;
+  19   1          LCDInit();
+  20   1          DelayXms(20);
+  21   1      //  显示整数   
+  22   1          IntegerToStr(dat,str);   //显示-12345
+  23   1          LEDShowStr(0,0,str);
+  24   1      
+  25   1      //  显示小数num2
+  26   1          sprintf(floatbuf2,"%0.1f",num2);   //浮点型格式化输出，头文件 stdio.h
+  27   1          LEDShowStr(0,1,floatbuf2);
+  28   1      
+  29   1      //  显示小数num
+  30   1          sprintf(floatbuf,"%0.5f",num);   //浮点型格式化输出，头文件 stdio.h
+  31   1          LEDShowStr(7,1,floatbuf);
+  32   1      
+  33   1          while(1);
+  34   1      
+  35   1      }
+  36          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    162    ----
+   CONSTANT SIZE    =     12    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      43
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
