@@ -202,7 +202,11 @@
       <Focus>0</Focus>
       <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD
       <TopLine>19</TopLine>
+=======
+      <TopLine>43</TopLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
       <CurrentLine>63</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\LCD1602.c</PathWithFileName>
@@ -216,7 +220,11 @@
       <Focus>0</Focus>
       <ColumnNumber>21</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD
       <TopLine>26</TopLine>
+=======
+      <TopLine>35</TopLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
       <CurrentLine>47</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Source\main.c</PathWithFileName>
@@ -224,9 +232,15 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
+=======
+      <FileNumber>0</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>1</tvExp>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
       <Focus>0</Focus>
       <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -239,9 +253,15 @@
   </Group>
 
   <AlienFiles>
+<<<<<<< HEAD
     <PathWithFilename>F:\00-Github Protues\Protues-with-C51\07-LCD1602\05-液晶显示按键菜单界面的编程实现\01-Keil\SOURCE\KEY.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>11</CurrentLine>
+=======
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\07-LCD1602\05-液晶显示按键菜单界面的编程实现\01-Keil\SOURCE\LCD1602.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>13</CurrentLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -265,9 +285,15 @@
   </AlienFiles>
 
   <AlienFiles>
+<<<<<<< HEAD
     <PathWithFilename>F:\00-Github Protues\Protues-with-C51\07-LCD1602\05-液晶显示按键菜单界面的编程实现\01-Keil\SOURCE\LCD1602.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>13</CurrentLine>
+=======
+    <PathWithFilename>F:\00-Github Protues\Protues-with-C51\07-LCD1602\05-液晶显示按键菜单界面的编程实现\01-Keil\SOURCE\KEY.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>11</CurrentLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1636,13 +1662,21 @@
         <Doc>
           <Name>..\Source\main.c</Name>
           <ColumnNumber>21</ColumnNumber>
+<<<<<<< HEAD
           <TopLine>26</TopLine>
+=======
+          <TopLine>35</TopLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
           <CurrentLine>47</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\Source\LCD1602.c</Name>
           <ColumnNumber>16</ColumnNumber>
+<<<<<<< HEAD
           <TopLine>19</TopLine>
+=======
+          <TopLine>43</TopLine>
+>>>>>>> f8d36bd7ef7a39a92cdb1acbfe14798f2d04e36f
           <CurrentLine>63</CurrentLine>
         </Doc>
         <Doc>
